@@ -23,4 +23,9 @@ To start the MySQL server in the VM type (as root):
 
 Note that all tables and data is installed during the test's setup
 phase.
+
+
+Please note, that you must copy jdbc.properties.template to jdbc.properties and 
+change it to reflect your database connection in order to successfully establish
+a connection to the database.
 		
