@@ -19,15 +19,18 @@ public class MetamodelTest {
 
 		List<MState> states = Arrays.asList(init, fin, on, off);
 
+		MTransition initTrans = new MTransition("","");
+		initTrans.setTarget(off);
 		MTransition turnOn = new MTransition("turnOn()", "currentOn()");
-		turnOn.setTarget(off);
+		turnOn.setTarget(on);
 		MTransition turnOff = new MTransition("turnOff()", "currentOff()");
-		turnOff.setTarget(on);
+		turnOff.setTarget(off);
 		MTransition burnOut = new MTransition("burnOut()", "currentOff()");
 		burnOut.setTarget(fin);
 
 		off.getTransitions().add(turnOn);
 		on.setTransitions(Arrays.asList(turnOff, burnOut));
+		init.getTransitions().add(initTrans);
 
 		lightBulb = new MStateMachine();
 		lightBulb.setStates(states);
