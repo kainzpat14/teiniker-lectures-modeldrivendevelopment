@@ -1,0 +1,121 @@
+@startuml
+object MDocument001
+
+object MNode001{
+	name = "students"
+}
+
+object MNode002{
+	name = "student"
+}
+
+object MNode003{
+	name = "grades"
+}
+
+object MNode004{
+	name = "grade"
+}
+
+object MAttribute001{
+	name = "lecture"
+	value = "MDD"
+}
+
+MNode004 o-- MAttribute001 : attributes
+object MAttribute002{
+	name = "grade"
+	value = "2"
+}
+
+MNode004 o-- MAttribute002 : attributes
+MNode003 o-- MNode004 : children
+object MNode005{
+	name = "grade"
+}
+
+object MAttribute003{
+	name = "lecture"
+	value = "PSE"
+}
+
+MNode005 o-- MAttribute003 : attributes
+object MAttribute004{
+	name = "grade"
+	value = "1"
+}
+
+MNode005 o-- MAttribute004 : attributes
+MNode003 o-- MNode005 : children
+MNode002 o-- MNode003 : children
+object MAttribute005{
+	name = "name"
+	value = "John Doe"
+}
+
+MNode002 o-- MAttribute005 : attributes
+object MAttribute006{
+	name = "startingYear"
+	value = "2019"
+}
+
+MNode002 o-- MAttribute006 : attributes
+MNode001 o-- MNode002 : children
+object MNode006{
+	name = "student"
+}
+
+object MNode007{
+	name = "grades"
+}
+
+object MNode008{
+	name = "grade"
+}
+
+object MAttribute007{
+	name = "lecture"
+	value = "MDD"
+}
+
+MNode008 o-- MAttribute007 : attributes
+object MAttribute008{
+	name = "grade"
+	value = "1"
+}
+
+MNode008 o-- MAttribute008 : attributes
+MNode007 o-- MNode008 : children
+object MNode009{
+	name = "grade"
+}
+
+object MAttribute009{
+	name = "lecture"
+	value = "PSE"
+}
+
+MNode009 o-- MAttribute009 : attributes
+object MAttribute010{
+	name = "grade"
+	value = "1"
+}
+
+MNode009 o-- MAttribute010 : attributes
+MNode007 o-- MNode009 : children
+MNode006 o-- MNode007 : children
+object MAttribute011{
+	name = "name"
+	value = "Jane Doe"
+}
+
+MNode006 o-- MAttribute011 : attributes
+object MAttribute012{
+	name = "startingYear"
+	value = "2019"
+}
+
+MNode006 o-- MAttribute012 : attributes
+MNode001 o-- MNode006 : children
+MDocument001 o-- MNode001 : rootNode
+@enduml
