@@ -1,0 +1,49 @@
+@startuml
+class Telegrams {
+}
+
+class NamedElement {
+	name : String
+}
+
+class MappedElement {
+	mapping : String
+}
+
+NamedElement <|-- MappedElement
+
+class ComplexElement {
+}
+ComplexElement --|> NamedElement
+class Telegram {
+	
+}
+
+MappedElement <|-- Telegram
+ComplexElement <|-- Telegram
+Telegram --o Telegrams : inputTelegrams
+Telegram --o Telegrams : outputTelegrams
+
+class Field {
+}
+
+Field --|> MappedElement
+Field --* ComplexElement
+
+class ComplexField {
+}
+
+ComplexField --|> ComplexElement
+
+ComplexField --|> Field
+
+class StringField {
+}
+
+StringField --|> Field
+
+class IntField {
+}
+
+IntField --|> Field
+@enduml

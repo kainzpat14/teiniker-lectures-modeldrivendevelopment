@@ -1,0 +1,53 @@
+@startuml
+object MTelegrams001
+
+object MTelegram001{
+	mapping = "ALIVE"
+	name = "Alive"
+}
+
+MTelegrams001 o-- MTelegram001 : inputTelegrams
+object MTelegram002{
+	mapping = "TRANSPORT_COMPLETE"
+	name = "TransportComplete"
+}
+
+object MStringField001{
+	mapping = "BARCODE"
+	name = "barcode"
+}
+
+MTelegram002 o-- MStringField001 : fields
+object MIntField001{
+	mapping = "TARGET"
+	name = "target"
+}
+
+MTelegram002 o-- MIntField001 : fields
+object MIntField002{
+	mapping = "STATUS"
+	name = "status"
+}
+
+MTelegram002 o-- MIntField002 : fields
+MTelegrams001 o-- MTelegram002 : inputTelegrams
+MTelegrams001 o-- MTelegram001 : outputTelegrams
+object MTelegram003{
+	mapping = "TRANSPORT"
+	name = "Transport"
+}
+
+object MStringField002{
+	mapping = "BARCODE"
+	name = "barcode"
+}
+
+MTelegram003 o-- MStringField002 : fields
+object MIntField003{
+	mapping = "TARGET"
+	name = "target"
+}
+
+MTelegram003 o-- MIntField003 : fields
+MTelegrams001 o-- MTelegram003 : outputTelegrams
+@enduml
