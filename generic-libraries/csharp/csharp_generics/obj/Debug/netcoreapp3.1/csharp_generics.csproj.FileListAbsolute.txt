@@ -1,0 +1,12 @@
+/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/bin/Debug/netcoreapp3.1/csharp_generics.deps.json
+/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/bin/Debug/netcoreapp3.1/csharp_generics.runtimeconfig.json
+/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/bin/Debug/netcoreapp3.1/csharp_generics.runtimeconfig.dev.json
+/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/bin/Debug/netcoreapp3.1/csharp_generics.dll
+/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/bin/Debug/netcoreapp3.1/csharp_generics.pdb
+/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.csprojAssemblyReference.cache
+/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.AssemblyInfoInputs.cache
+/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.AssemblyInfo.cs
+/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.csproj.CoreCompileInputs.cache
+/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.dll
+/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.pdb
+/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.genruntimeconfig.cache
