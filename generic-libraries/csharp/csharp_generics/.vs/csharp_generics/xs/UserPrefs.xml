@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{D0F47E77-AAE3-4913-850A-BB60671F3F7C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Stack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="80" Column="102" />
-      <File FileName="Stack.cs" Line="6" Column="3" />
+      <File FileName="Program.cs" Line="126" Column="8" />
+      <File FileName="Stack.cs" Line="28" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="csharp_generics" expanded="True">
             <Node name="csharp_generics" expanded="True">
-              <Node name="Stack.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
