@@ -2,48 +2,51 @@
 class Telegrams {
 }
 
-class NamedElement {
+abstract class NamedElement {
 	name : String
 }
 
-class MappedElement {
+abstract class MappedElement {
 	mapping : String
 }
 
-NamedElement <|-- MappedElement
 
 class ComplexElement {
 }
-ComplexElement --|> NamedElement
 class Telegram {
 	
 }
 
-MappedElement <|-- Telegram
-ComplexElement <|-- Telegram
-Telegram --o Telegrams : inputTelegrams
-Telegram --o Telegrams : outputTelegrams
 
 class Field {
 }
 
+interface Type {
+}
+
+
+class ComplexType {
+}
+
+
+class StringType {
+}
+
+
+class IntType {
+}
+
+IntType ..|> Type
+Field *-- "1" Type : type
+MappedElement <|-- Telegram
+ComplexElement <|-- Telegram
+Telegram "*" --o Telegrams : inputTelegrams
+Telegram "*" --o Telegrams : outputTelegrams
+NamedElement <|-- MappedElement
 Field --|> MappedElement
-Field --* ComplexElement
-
-class ComplexField {
-}
-
-ComplexField --|> ComplexElement
-
-ComplexField --|> Field
-
-class StringField {
-}
-
-StringField --|> Field
-
-class IntField {
-}
-
-IntField --|> Field
+Field "*" --* ComplexElement
+ComplexType --|> ComplexElement
+StringType ..|> Type
+ComplexType --|> NamedElement
+ComplexType ..|> Type
 @enduml
