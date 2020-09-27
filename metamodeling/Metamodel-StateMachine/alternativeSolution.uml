@@ -1,0 +1,22 @@
+@startuml
+
+	class StateMachine {
+	}
+	
+	class State {
+		String name
+	}
+	
+	class Transition {
+		Method trigger
+		Method activity
+	} 
+	
+	StateMachine *-- "1" State : initialState
+	State *-- "*" Transition : transitions
+	Transition *-- "0..1" State : target
+	note right on link
+		Transition without target == Transition to endState
+	end note
+
+@enduml

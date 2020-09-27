@@ -11,8 +11,9 @@ abstract class MappedElement {
 }
 
 
-class ComplexElement {
+abstract class ComplexElement {
 }
+
 class Telegram {
 	
 }
