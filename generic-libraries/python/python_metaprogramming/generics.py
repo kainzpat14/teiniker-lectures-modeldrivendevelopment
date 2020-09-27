@@ -1,6 +1,5 @@
 # python uses ducktyping, so this method does not need generics, it supports sorting of all lists containing 
 # items which support the > operator
-from typing import TypeVar, SupportsAbs
 def bubbleSort(mylist):
     count=len(mylist)
     for i in range(count-1):
