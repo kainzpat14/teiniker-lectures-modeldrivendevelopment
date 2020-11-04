@@ -1,0 +1,42 @@
+@startuml
+object MStateMachine001
+
+object MState001{
+	name = "END"
+}
+
+MStateMachine001 o-- MState001 : finalStates
+object MState002{
+	name = "OFF"
+}
+
+object MTransition001{
+	trigger = "switchOn()"
+	activity = "currentOn()"
+}
+
+object MState003{
+	name = "ON"
+}
+
+object MTransition002{
+	trigger = "switchOff()"
+	activity = "currentOff()"
+}
+
+MTransition002 o-- MState002 : target
+MState003 o-- MTransition002 : transitions
+object MTransition003{
+	trigger = "burnOut()"
+	activity = "currentOff()"
+}
+
+MTransition003 o-- MState001 : target
+MState003 o-- MTransition003 : transitions
+MTransition001 o-- MState003 : target
+MState002 o-- MTransition001 : transitions
+MStateMachine001 o-- MState002 : initState
+MStateMachine001 o-- MState001 : states
+MStateMachine001 o-- MState002 : states
+MStateMachine001 o-- MState003 : states
+@enduml
