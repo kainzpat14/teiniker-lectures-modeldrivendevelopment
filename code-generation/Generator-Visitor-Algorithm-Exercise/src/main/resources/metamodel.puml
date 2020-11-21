@@ -1,0 +1,26 @@
+@startuml
+class Algorithm  {
+}
+
+abstract class Step {	
+	String methodName
+}
+
+class ConditionalStep {
+}
+
+class ExecuteStep {
+}
+
+ConditionalStep --|> Step
+ExecuteStep --|> Step
+
+Algorithm *-- "1" Step : firstStep
+ExecuteStep *-- "0..1" Step : nextStep
+ConditionalStep *-- "0..1" Step : trueStep
+ConditionalStep *-- "0..1" Step : falseStep
+note left
+Constraint: One step can only occur once in any reference
+end note
+
+@enduml
