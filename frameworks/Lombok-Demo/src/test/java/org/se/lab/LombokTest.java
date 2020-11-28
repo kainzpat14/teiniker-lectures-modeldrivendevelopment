@@ -100,7 +100,7 @@ public class LombokTest {
 	}
 
 	@Test
-	public void testPerson() {
+	public void testData() {
 		Person person1 = new Person("Max", "Mustermann");
 		System.out.println(person1.getFirstname());
 		System.out.println(person1.getLastname());
