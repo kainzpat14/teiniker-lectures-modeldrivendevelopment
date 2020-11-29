@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 
-public aspect LogginAspect {
+public aspect LoggingAspect {
 	pointcut logWrappers() : within(@org.se.lab.concerns.Wrapper *) && execution(* *(..));
 	
 	Object around(): logWrappers()  {
