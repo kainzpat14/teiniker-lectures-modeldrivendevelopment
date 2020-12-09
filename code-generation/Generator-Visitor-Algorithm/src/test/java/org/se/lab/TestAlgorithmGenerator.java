@@ -116,6 +116,6 @@ public class TestAlgorithmGenerator {
 	}
 
 	private String normalize(String stringWithLineEndings) {
-		return stringWithLineEndings.replace("\r", "\n");
+		return stringWithLineEndings.replace("\r", "");
 	}
 }
