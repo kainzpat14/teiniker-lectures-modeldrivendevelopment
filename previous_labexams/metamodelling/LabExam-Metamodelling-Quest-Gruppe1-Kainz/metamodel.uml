@@ -1,0 +1,43 @@
+@startuml
+
+class Game {
+}
+
+class Quest {
+}
+
+abstract class Step {
+	boolean optional
+}
+
+abstract class DescribedElement {
+	String short
+	String description
+}
+
+abstract class NumberedEntityStep {
+	String entityKey
+	int count
+}
+
+class GatherStep {
+}
+
+class KillStep {
+}
+
+class ProtectStep {
+}
+
+Game "1" *-- "1..*" Quest : quests
+Quest --|> DescribedElement
+Quest "*" o-- "0..1" Quest: requirement
+Quest "1" *-- "1..*" Step : steps
+Step --|> DescribedElement
+Step "*" o-- "0..1" Step: requirement
+NumberedEntityStep --|> Step
+GatherStep --|> NumberedEntityStep
+KillStep --|> NumberedEntityStep
+ProtectStep --|> NumberedEntityStep
+
+@enduml

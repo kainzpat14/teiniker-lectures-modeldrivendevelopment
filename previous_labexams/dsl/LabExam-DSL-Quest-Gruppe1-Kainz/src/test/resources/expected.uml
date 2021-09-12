@@ -1,0 +1,43 @@
+@startuml
+object MGame001
+
+object MQuest001{
+	shortDescription = "Rescue the princess"
+	description = "The princess has been locked into a tower, rescue her!"
+}
+
+object MGatherStep001{
+	entityKey = "Key"
+	count = 1
+	optional = false
+	shortDescription = "Find the key!"
+	description = "The key to the tower must be here somewhere, we need to find it"
+}
+
+MQuest001 o-- MGatherStep001 : steps
+object MKillStep001{
+	entityKey = "Ghost"
+	count = 1
+	optional = false
+	shortDescription = "Kill the ghost"
+	description = "The ghost is between you and the princess, slay it!"
+}
+
+MQuest001 o-- MKillStep001 : steps
+MGame001 o-- MQuest001 : quests
+object MQuest002{
+	shortDescription = "Take the princess home"
+	description = "The princess is anxious to get home, help her get there"
+}
+
+object MProtectStep001{
+	entityKey = "Princess"
+	count = 1
+	optional = false
+	shortDescription = "Protect the princess"
+	description = "The way home is dangerous, protect the princess on your way home"
+}
+
+MQuest002 o-- MProtectStep001 : steps
+MGame001 o-- MQuest002 : quests
+@enduml

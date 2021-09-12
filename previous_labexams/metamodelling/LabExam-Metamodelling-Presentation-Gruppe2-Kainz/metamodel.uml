@@ -1,0 +1,58 @@
+@startuml
+class Presentation {
+
+}
+
+class Slide {
+	header : String
+}
+
+Slide --* Presentation
+
+class Container {
+}
+
+Slide --|> Container
+
+class Element {
+}
+
+Element --* Container
+
+class ContainerElement {
+}
+
+ContainerElement --|> Element
+ContainerElement --|> Container
+
+class Text  {
+	text : String
+}
+
+class TextElement {
+	
+}
+
+TextElement --|> Text
+TextElement --|> Element
+
+class ListElement {
+}
+
+ListElement --|> Element
+
+class ListEntry {
+	
+}
+
+ListEntry --|> Text
+
+ListEntry --* ListElement
+
+class PictureElement {
+ 	picture : Picture 
+}
+
+PictureElement --|> Element
+
+@enduml

@@ -1,0 +1,114 @@
+@startuml
+object MGame001
+
+object MRoom001{
+	name = "Attic"
+	description = "You look around and find yourself in what looks like an attic, light enters the room via holes in the roof and the entire room is covered in dust. In the middle of the room there is a candle and a trap door is on the floor."
+}
+
+object MObject001{
+	name = "Candle"
+	description = "A large candle stands in the middle of the room"
+}
+
+object MInteraction001{
+	name = "Light"
+	description = "Light the candle"
+}
+
+object MPrecondition001{
+	requiredQuantity = 1
+}
+
+object MItem001{
+	name = "Lighter"
+	description = "Used to set fire to things"
+}
+
+MPrecondition001 o-- MItem001 : item
+MInteraction001 o-- MPrecondition001 : precondition
+object MTextOccurence001{
+	text = "The candle throws light around the room. In one of the corners you see a key."
+}
+
+MInteraction001 o-- MTextOccurence001 : occurences
+MObject001 o-- MInteraction001 : interactions
+MRoom001 o-- MObject001 : objects
+object MObject002{
+	name = "Trap door"
+	description = "A trap door"
+}
+
+object MInteraction002{
+	name = "Open"
+	description = "Open the trap door"
+}
+
+object MPrecondition002{
+	requiredQuantity = 1
+}
+
+object MItem002{
+	name = "Trap Door Key"
+	description = "Used to open the trap door in the attic"
+}
+
+MPrecondition002 o-- MItem002 : item
+MInteraction002 o-- MPrecondition002 : precondition
+object MTextOccurence002{
+	text = "The trap door opens and you go down to a different room"
+}
+
+MInteraction002 o-- MTextOccurence002 : occurences
+object MTransportOccurence001
+
+object MRoom002{
+	name = "Hall"
+	description = "You find yourself in a corridor with two doors at either end and a drap door above you."
+}
+
+object MObject003{
+	name = "Trap Door"
+	description = "The trap door you just came through"
+}
+
+object MInteraction003{
+	name = "Climp"
+	description = "Climp thorugh the trap door"
+	precondition = null
+}
+
+object MTransportOccurence002
+
+MTransportOccurence002 o-- MRoom001 : room
+MInteraction003 o-- MTransportOccurence002 : occurences
+MObject003 o-- MInteraction003 : interactions
+MRoom002 o-- MObject003 : objects
+MTransportOccurence001 o-- MRoom002 : room
+MInteraction002 o-- MTransportOccurence001 : occurences
+MObject002 o-- MInteraction002 : interactions
+MRoom001 o-- MObject002 : objects
+object MObject004{
+	name = "Key"
+	description = "A rusty key"
+}
+
+object MInteraction004{
+	name = "Pick Up"
+	description = "Pick up the key"
+	precondition = null
+}
+
+object MInventoryOccurence001{
+	count = 1
+}
+
+MInventoryOccurence001 o-- MItem002 : item
+MInteraction004 o-- MInventoryOccurence001 : occurences
+MObject004 o-- MInteraction004 : interactions
+MRoom001 o-- MObject004 : objects
+MGame001 o-- MRoom001 : rooms
+MGame001 o-- MRoom002 : rooms
+MGame001 o-- MItem001 : items
+MGame001 o-- MItem002 : items
+@enduml

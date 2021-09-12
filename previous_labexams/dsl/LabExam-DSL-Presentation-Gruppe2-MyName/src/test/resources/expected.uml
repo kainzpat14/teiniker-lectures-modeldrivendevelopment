@@ -1,0 +1,52 @@
+@startuml
+object MPresentation001
+
+object MSlide001{
+	header = "Introduction"
+}
+
+object MTextElement001{
+	text = "Welcome to this LabExam"
+}
+
+MSlide001 o-- MTextElement001 : elements
+MPresentation001 o-- MSlide001 : slides
+object MSlide002{
+	header = "TODO"
+}
+
+object MTextElement002{
+	text = "In this LabExam you will have to: "
+}
+
+MSlide002 o-- MTextElement002 : elements
+object MListElement001
+
+object MListEntry001{
+	text = "Create an internal DSL using a builder"
+}
+
+MListElement001 o-- MListEntry001 : entries
+object MListEntry002{
+	text = "Use the object graph to figure out where your mistakes lie"
+}
+
+MListElement001 o-- MListEntry002 : entries
+object MListEntry003{
+	text = "Test your implementation using this test class"
+}
+
+MListElement001 o-- MListEntry003 : entries
+MSlide002 o-- MListElement001 : elements
+MPresentation001 o-- MSlide002 : slides
+object MSlide003{
+	header = "Good luck!"
+}
+
+object MPictureElement001{
+	pictureUrl = "https://cdn.pixabay.com/photo/2017/02/21/10/04/symbol-2085312_1280.png"
+}
+
+MSlide003 o-- MPictureElement001 : elements
+MPresentation001 o-- MSlide003 : slides
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+
+class Function {
+}
+
+class Parameter {
+}
+
+abstract class NamedElement {
+	String name
+}
+
+class FunctionCall {
+}
+
+class Pipeline {
+}
+
+Function --|> NamedElement
+Parameter --|> NamedElement
+Function *-- "*" Parameter : parameters
+
+FunctionCall o-- "1" Function : function
+FunctionCall *-- "*" FunctionCall : inputs
+note right on link
+Constraint: Number of inputs must
+ equal number of parameters
+end note
+
+Pipeline *-- "1" FunctionCall : end
+
+@enduml

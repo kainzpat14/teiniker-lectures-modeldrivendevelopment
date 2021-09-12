@@ -1,0 +1,64 @@
+@startuml
+
+class Job {
+	String name
+}
+
+interface Trigger {
+}
+
+class VersioningTrigger {
+	String url
+}
+
+class CronTrigger {
+	String cronExpression
+}
+
+class JobTrigger {
+}
+
+interface Task {
+}
+
+interface PreBuildTask {
+}
+
+interface BuildTask {
+}
+
+interface PostBuildTask {
+}
+
+class ShellTask {
+	String script
+}
+
+class MavenTask {
+	String command
+}
+
+class MailTask {
+	List<String> addresses
+}
+
+Job "1" *-- "1" Trigger : trigger;
+JobTrigger "*" o-- "1" Job : job;
+VersioningTrigger ..|> Trigger
+CronTrigger ..|> Trigger
+JobTrigger ..|> Trigger
+MavenTask ..|> BuildTask
+MailTask ..|> PostBuildTask
+ShellTask ..|> PreBuildTask
+ShellTask ..|> BuildTask
+ShellTask ..|> PostBuildTask
+PreBuildTask --|> Task
+BuildTask --|> Task
+PostBuildTask --|> Task
+
+Job "1" *-- "*" PreBuildTask : preBuildTasks;
+Job "1" *-- "*" BuildTask : buildTasks;
+Job "1" *-- "*" PostBuildTask : postBuildTasks;
+
+
+@enduml

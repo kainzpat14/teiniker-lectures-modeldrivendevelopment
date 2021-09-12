@@ -1,0 +1,41 @@
+@startuml
+
+class Installer {
+}
+
+class InstallStep {
+}
+
+interface Step {
+}
+
+class OutputStep {
+	String header
+	String text
+}
+
+class CopyStep {
+	String source
+	String destination
+}
+
+class ShellStep {
+	String script
+}
+
+class CreateFolderStep {
+	String folderName
+}
+
+Installer "1" *-- "*" Step : preparationSteps
+Installer "1" *-- "1..*" InstallStep : installSteps
+Installer "1" *-- "*" Step : cleanupSteps
+InstallStep "1" *-- "1" Step : installStep
+InstallStep "1" *-- "1" Step : cleanupStep
+
+OutputStep --|> Step
+CopyStep --|> Step
+ShellStep --|> Step
+CreateFolderStep --|> Step
+
+@enduml
