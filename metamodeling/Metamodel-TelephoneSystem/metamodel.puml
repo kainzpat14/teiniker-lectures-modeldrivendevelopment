@@ -1,0 +1,49 @@
+@startuml
+
+class Extension extends String {
+}
+note left
+    Constraint: Numeric
+end note
+
+class RegisteredWorkflow {
+}
+
+class Workflow implements Action{
+    name : String
+}
+
+class Menu implements Action {
+    query : String
+}
+
+class MenuEntry {
+    number : number
+    text : String
+}
+note right
+    Constraint: number >= 0 && number <= 9
+end note
+
+interface Action {
+}
+
+class Terminate implements Action{
+    message : String
+}
+
+class TransferCall implements Action {
+}
+
+RegisteredWorkflow "1" *-- "1" Extension : extension
+RegisteredWorkflow "*" *-- "1" Workflow : workflow
+
+Workflow "*" *-- "1" Menu : startMenu
+
+Menu "1" *-- "1..*" MenuEntry : entries
+
+MenuEntry "*" *-- "1" Action : action
+
+TransferCall "*" *-- "1" Extension : extension
+
+@enduml

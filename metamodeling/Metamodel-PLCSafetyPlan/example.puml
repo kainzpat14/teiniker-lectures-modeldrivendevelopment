@@ -1,0 +1,65 @@
+@startuml
+
+object program <<SafetyProgram>>
+
+object inputEmergencyStop <<Input>> {
+    name = "Emergency Stop"
+}
+
+object inputDoorDepalletizerOpen <<Input>> {
+    name = "Depalletizer Door Open"
+}
+
+object inputDoorPalletizerOpen <<Input>> {
+    name = "Palletizer Door Open"
+}
+
+object shutdownDepalletizer1 <<ShutdownNode>> {
+    output = "Depalletizer Power"
+}
+object shutdownDepalletizer2 <<ShutdownNode>> {
+    output = "Depalletizer Power"
+}
+object shutdownPalletizer1 <<ShutdownNode>> {
+    output = "Palletizer Power"
+}
+object shutdownPalletizer2 <<ShutdownNode>> {
+    output = "Palletizer Power"
+}
+object shutdownPalletizer3 <<ShutdownNode>> {
+    output = "Palletizer Power"
+}
+
+object terminal1 <<TerminalNode>>
+object terminal2 <<TerminalNode>>
+object terminal3 <<TerminalNode>>
+
+object emergencyStopActive <<IsTrueNode>>
+
+program *-- emergencyStopActive : start
+
+emergencyStopActive *-- inputEmergencyStop : input
+emergencyStopActive *-- shutdownDepalletizer1 : trueNode
+shutdownDepalletizer1 *-- shutdownPalletizer1 : next
+shutdownPalletizer1 *-- terminal1 : next
+
+object depalletizerOpen1 <<IsTrueNode>>
+object palletizerOpen1 <<IsTrueNode>>
+object palletizerOpen2 <<IsTrueNode>>
+
+emergencyStopActive *-- depalletizerOpen1 : falseNode
+depalletizerOpen1 *-- inputDoorDepalletizerOpen : input
+depalletizerOpen1 *--shutdownDepalletizer2 : trueNode
+depalletizerOpen1 *-- palletizerOpen1 : falseNode
+shutdownDepalletizer2 *-- palletizerOpen2 : next
+
+palletizerOpen1 *-- inputDoorPalletizerOpen : input
+palletizerOpen1 *-- shutdownPalletizer2 : trueNode
+palletizerOpen1 *-- terminal2 : falseNode
+
+palletizerOpen2 *-- inputDoorPalletizerOpen : input
+palletizerOpen2 *-- shutdownPalletizer3 : trueNode
+palletizerOpen2 *-- terminal3 : falseNode
+
+
+@enduml

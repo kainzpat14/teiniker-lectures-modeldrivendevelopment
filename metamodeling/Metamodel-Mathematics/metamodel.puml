@@ -1,0 +1,80 @@
+@startuml
+class Process {
+}
+
+class Formula {
+}
+
+class UserInput {
+}
+
+class FormulaExecution {
+}
+
+interface VariableInput {
+}
+
+class Variable {
+}
+
+interface OperationInput {
+}
+
+class Constant {
+    value : RealNumber
+}
+
+interface Operation {
+}
+
+class Addition {
+}
+
+class Substraction {
+}
+
+class Multiplication {
+}
+
+class Division {
+}
+
+class Potentiation {
+}
+
+class BinaryOperation {
+}
+
+Process "*" *-- "1" FormulaExecution : lastFormula
+
+Formula  "1" *-- "*" Variable : inputs
+
+UserInput --|> VariableInput
+FormulaExecution --|> VariableInput
+
+VariableInput "*" o-- "1" Variable : variable
+
+FormulaExecution "*" o-- "1" Formula : formula
+
+FormulaExecution "1" *-- "*" VariableInput : inputs
+note on link
+    Constraint: Each Formula variable must have an VariableInput
+end note
+
+Formula "1" *-- "1" Operation : topOperation
+
+BinaryOperation --|> Operation
+Addition --|> BinaryOperation
+Substraction --|> BinaryOperation
+Multiplication --|> BinaryOperation
+Division --|> BinaryOperation
+Potentiation --|> BinaryOperation
+
+Operation --|> OperationInput
+Variable --|> OperationInput
+Constant --|> OperationInput
+
+BinaryOperation "1..*" *-- "1" OperationInput : operand1
+BinaryOperation "1..*" *-- "1" OperationInput : operand2
+
+@enduml

@@ -1,0 +1,145 @@
+@startuml
+
+object extensionGeneral <<Extension>> {
+    value = "000"
+}
+
+object extensionSales <<Extension>> {
+    value = "111"
+}
+
+object extensionComplaints <<Extension>> {
+    value = "666"
+}
+
+object extensionSalesConsultants <<Extension>>  {
+    value="112"
+}
+
+object extensionOrderSystem <<Extension>> {
+    value="113"
+}
+
+object extensionSupport <<Extension>> {
+    value="667"
+}
+
+object extensionManager <<Extension>> {
+    value="668"
+}
+
+object registeredMainWorkflow <<RegisteredWorkflow>>
+
+object mainWorkflow <<Workflow>> {
+    name = "Main"
+}
+
+object startMenu <<Menu>> {
+    query="What would you like to do?"
+}
+
+object menuEntrySales <<MenuEntry>> {
+    number = 1
+    text = "Buy"
+}
+
+object menuEntryComplaints <<MenuEntry>> {
+    number = 2
+    text = "Complain or need support"
+}
+
+object menuEntryQuit <<MenuEntry>> {
+    number = 0
+    text = "Exit"
+}
+
+registeredMainWorkflow *-- extensionGeneral : extension
+registeredMainWorkflow *-- mainWorkflow : workflow
+
+mainWorkflow *-- startMenu : startMenu
+startMenu *-- menuEntrySales : entries
+startMenu *-- menuEntryComplaints : entries
+startMenu *-- menuEntryQuit : entries
+
+object registeredSalesWorkflow <<RegisteredWorkflow>>
+
+object workflowSales <<Workflow>> {
+    name = "Sales"
+}
+
+object registeredComplaintsWorkflow <<RegisteredWorkflow>>
+
+object workflowComplaints <<Workflow>> {
+    name = "Complaints"
+}
+
+object terminate1 <<Terminate>> {
+    message = "Thank you for calling"
+}
+
+menuEntrySales *-- workflowSales : action
+menuEntryComplaints *-- workflowComplaints : action
+menuEntryQuit *-- terminate1 : action
+
+registeredComplaintsWorkflow *-- workflowComplaints : workflow
+registeredComplaintsWorkflow *-- extensionComplaints : extension
+
+registeredSalesWorkflow *-- workflowSales : workflow
+registeredSalesWorkflow *-- extensionSales : extension
+
+object menuSalesNavigation <<Menu>> {
+    query = "What do you want to do?"
+}
+
+object menuEntryConsult <<MenuEntry>> {
+    number = 1
+    text = "Get information about products"
+}
+
+object menuEntryBuy <<MenuEntry>> {
+    number = 2
+    text = "Buy a specific product"
+}
+
+object menuComplaints <<Menu>> {
+    query = "Whats the nature of your complaint?"
+}
+
+object menuEntryTechnical <<MenuEntry>> {
+    number = 1
+    text = "Technical"
+}
+
+object menuEntryOther <<MenuEntry>> {
+    number = 2
+    text = "Other"
+}
+
+object transferConsultant <<TransferCall>>
+object transferOrderSystem <<TransferCall>>
+object transferSupport <<TransferCall>>
+object transferManager <<TransferCall>>
+
+workflowSales *-- menuSalesNavigation : startMenu
+workflowComplaints *-- menuComplaints : startMenu
+
+menuSalesNavigation *-- menuEntryConsult : entries
+menuSalesNavigation *-- menuEntryBuy : entries
+
+menuComplaints *-- menuEntryTechnical : entries
+menuComplaints *-- menuEntryOther : entries
+
+menuEntryConsult *-- transferConsultant : action
+menuEntryBuy *-- transferOrderSystem : action
+menuEntryTechnical *-- transferSupport : action
+menuEntryOther *-- transferManager : action
+
+transferConsultant *-- extensionSalesConsultants : extension
+transferOrderSystem *-- extensionOrderSystem : extension
+transferSupport *-- extensionSupport : extension
+transferManager *-- extensionManager : extension
+
+
+
+
+@enduml

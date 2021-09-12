@@ -1,0 +1,42 @@
+@startuml
+
+class SafetyProgram
+
+interface Node
+
+class TerminalNode implements Node
+
+interface DecisionNode implements Node
+
+abstract class BinaryDecisionNode implements DecisionNode
+
+class XorNode extends BinaryDecisionNode
+
+class AndNode extends BinaryDecisionNode
+
+class OrNode extends BinaryDecisionNode
+
+class IsTrueNode extends UnaryDecisionNode
+
+abstract class UnaryDecisionNode implements DecisionNode
+
+class NotNode extends UnaryDecisionNode
+
+class Input {
+    name : String
+}
+
+class ShutdownNode implements Node {
+    output : String
+}
+
+SafetyProgram "1" *-- "1" Node : start
+DecisionNode "1" *-- "1" Node : trueNode
+DecisionNode "1" *-- "1" Node : falseNode
+ShutdownNode "1" *-- "1" Node : next
+
+UnaryDecisionNode "*" o-- "1" Input : input
+BinaryDecisionNode "*" o-- "1" Input : input1
+BinaryDecisionNode "*" o-- "1" Input : input2
+
+@enduml

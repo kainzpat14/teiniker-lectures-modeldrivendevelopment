@@ -1,0 +1,76 @@
+@startuml
+
+object process1 <<Process>>
+
+object hypothenuse <<Formula>>
+
+object side1 <<Variable>>
+
+object side2 <<Variable>>
+
+object power1 <<Potentiation>>
+
+object power2 <<Potentiation>>
+
+object power3 <<Potentiation>>
+
+object two <<Constant>> {
+    value = 2
+}
+
+object half <<Constant>> {
+    value = 1/2
+}
+
+object addition1 <<Addition>>
+
+object scale <<Formula>>
+
+object base <<Variable>>
+
+object scaleFactor <<Variable>>
+
+object multiplication <<Multiplication>>
+
+hypothenuse *-- side1 : variables
+hypothenuse *-- side2 : variables
+
+hypothenuse *-- power3 : topOperation
+power3 *-- addition1 : operand1
+power3 *-- half : operand2
+addition1 *-- power1 : operand1
+addition1 *-- power2 : operand2
+power1 *-- side1 : operand1
+power1 *-- two : operand2
+power2 *-- side2 : operand1
+power2 *-- two : operand2
+
+scale *-- multiplication : topOperation
+multiplication *-- base : operand1
+multiplication *-- scaleFactor : operand2
+
+
+object scaleExecution <<FormulaExecution>>
+
+object scaleFactorInput <<UserInput>>
+
+object hypothenuseExecution <<FormulaExecution>>
+
+object side1Input <<UserInput>>
+
+object side2Input <<UserInput>>
+
+process1 *-- scaleExecution : lastFormula
+scaleExecution *-- scaleFactorInput : inputs
+scaleExecution *-- hypothenuseExecution : inputs
+scaleExecution *-- scale : formula
+hypothenuseExecution *-- side1Input : inputs
+hypothenuseExecution *-- side2Input : inputs
+hypothenuseExecution *-- hypothenuse : formula
+
+scaleFactorInput o-- scaleFactor : variable
+hypothenuseExecution o-- base : variable
+
+side1Input o-- side1 : variable
+side2Input o-- side2 : variable
+@enduml
