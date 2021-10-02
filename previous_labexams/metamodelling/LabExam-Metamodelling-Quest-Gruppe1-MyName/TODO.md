@@ -18,7 +18,7 @@ Create a metamodel using whichever tool you want (or even by hand) using the dom
 
 Anyone who has ever played an RPG is familiar with the same boring quest routine: Gather X, Kill X, Protect X. We will developing such a 
 quest easier by providing a metamodel for it. A game consists of multiple quests, each quest either unlocks immediately or upon completion 
-of another quest. A quest has a name, backstory and a number of steps, some of which may be optional, while others may not be. Each step either follows another or is available from the start. Either way a step has text describing the target to the player. Possible steps are:
+of another quest. A quest has a name, backstory and a number of steps, some of which may be optional, while others may not be. Each step either follows another or is available from the start. Either way a step has a name and a description describing the target to the player. Possible steps are:
 - Gather N pieces of Entity with name X
 - Kill N occurrences of Entity with name X
 - Protect N occurrences of Entity with name X
