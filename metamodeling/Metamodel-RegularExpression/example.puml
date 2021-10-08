@@ -1,0 +1,203 @@
+@startuml
+
+object expression <<Expression>> {
+}
+note left
+Hal{2}o( [A-Z][a-z0-9]+)?([!\\.]+).*
+end note
+
+object rootGroup <<RootGroup>> {
+}
+
+expression *-- rootGroup : rootGroup
+
+object hMatcher <<Matcher>> {
+    sequence = 0
+}
+
+rootGroup *-- hMatcher : elements
+
+object oneMultiplicty <<DefaultMultiplicity>> {
+    ONE
+}
+
+hMatcher *-- oneMultiplicty : multiplicity
+
+object hToken <<CharacterToken>> {
+    character = "H"
+}
+
+hMatcher *-- hToken : token
+
+object aMatcher <<Matcher>> {
+    sequence = 1
+}
+
+rootGroup *-- aMatcher : elements
+
+
+aMatcher *-- oneMultiplicty : multiplicity
+
+object aToken <<CharacterToken>> {
+    character = "a"
+}
+
+aMatcher *-- aToken : token
+
+object lMatcher <<Matcher>> {
+    sequence = 2
+}
+
+rootGroup *-- lMatcher : elements
+
+object twoMultiplicty <<ConstantMultiplicity>> {
+    constant = 2
+}
+
+lMatcher *-- twoMultiplicty : multiplicity
+
+object lToken <<CharacterToken>> {
+    character = "l"
+}
+
+lMatcher *-- lToken : token
+
+object oMatcher <<Matcher>> {
+    sequence = 3
+}
+
+rootGroup *-- oMatcher : elements
+
+
+oMatcher *-- oneMultiplicty : multiplicity
+
+object oToken <<CharacterToken>> {
+    character = "o"
+}
+
+oMatcher *-- oToken : token
+
+object childGroup1 <<ChildGroup>> {
+    sequence = 4
+}
+
+rootGroup *-- childGroup1 : elements
+
+object atMostOneMultiplicity <<DefaultMultiplicity>> {
+    AT_MOST_ONE
+}
+
+childGroup1 *-- atMostOneMultiplicity : multiplicity
+
+object spaceMatcher <<Matcher>> {
+    sequence = 0
+}
+
+childGroup1 *-- spaceMatcher : elements
+
+object spaceToken <<CharacterToken>> {
+    character = " "
+}
+
+spaceMatcher *-- spaceToken : token
+
+spaceMatcher *-- oneMultiplicty : multiplicity
+
+object azMatcher <<Matcher>> {
+    sequence = 2
+}
+
+childGroup1 *-- azMatcher : elements
+
+object azToken <<RangeToken>> {
+    start = "A"
+    end = "Z"
+}
+
+azMatcher *-- azToken : token
+azMatcher *-- oneMultiplicty : multiplicity
+
+object alphanumMatcher <<Matcher>> {
+    sequence = 3
+}
+
+childGroup1 *-- alphanumMatcher : elements
+
+object atLeastOneMultiplicity <<DefaultMultiplicity>> {
+    AT_LEAST_ONE
+}
+
+alphanumMatcher *-- atLeastOneMultiplicity : multiplicity
+
+object alphanumToken <<CompositeToken>> {
+}
+
+alphanumMatcher *-- alphanumToken : token
+
+object azToken2 <<RangeToken>> {
+    start = "a"
+    end = "z"
+}
+
+alphanumToken *-- azToken2 : tokens
+
+object numToken <<RangeToken>> {
+    start = "0"
+    end = "9"
+}
+
+alphanumToken *-- numToken : tokens
+
+
+object childGroup2 <<ChildGroup>> {
+    sequence = 5
+}
+
+rootGroup *-- childGroup2 : elements
+
+childGroup2 *-- oneMultiplicty : multiplicity
+
+object endMatcher <<Matcher>> {
+    sequence = 1
+}
+
+childGroup2 *-- endMatcher : elements
+
+endMatcher *-- atLeastOneMultiplicity : multiplicity
+
+object endToken <<CompositeToken>> {
+}
+
+endMatcher *-- endToken : token
+
+object exclaimToken <<CharacterToken>> {
+    character = "!"
+}
+
+endToken *-- exclaimToken : tokens
+
+object pointToken <<CharacterToken>> {
+    character = "."
+}
+
+endToken *-- exclaimToken : tokens
+
+
+object anyMatcher <<Matcher>> {
+    sequence = 6
+}
+
+rootGroup *-- anyMatcher : elements
+
+object anyToken  <<AnyToken>> {
+}
+
+anyMatcher *-- anyToken : token
+
+object anyMultiplicity <<DefaultMultiplicity>> {
+    ANY
+}
+
+anyMatcher *-- anyMultiplicity : multiplicity
+
+@enduml

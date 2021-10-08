@@ -22,4 +22,4 @@ and model basic boolean operators (ISTRUE, AND,OR,XOR,NOT), and the option to sh
 for certain outputs (each shutdown affects a named output).
 
 The program is a basic decision tree, not a graph (no loops allowed), each node has exactly
-one predecessor (except the first node), and max. 3 children (0 for terminal nodes, 1 for normal nodes, 2 for decisions). 
+one predecessor (except the first node), and max. 2 children (0 for terminal nodes, 1 for normal nodes, 2 for decisions). 

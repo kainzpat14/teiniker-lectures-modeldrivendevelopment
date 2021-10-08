@@ -1,0 +1,84 @@
+@startuml
+
+class Expression {
+}
+
+abstract class Group {
+}
+
+class RootGroup {
+}
+
+class ChildGroup {
+}
+
+abstract class GroupElement {
+    sequence : int
+}
+
+
+class Matcher {
+}
+
+interface Token {
+}
+
+interface SimpleToken {
+}
+
+class CompositeToken {
+}
+
+class CharacterToken {
+    character : char
+}
+
+class RangeToken {
+    start : char
+    end : char
+}
+
+class AnyToken {
+}
+
+interface Multiplicity {
+}
+
+enum DefaultMultiplicity {
+    AT_MOST_ONE
+    ANY
+    ONE
+    AT_LEAST_ONE
+}
+
+class ConstantMultiplicity {
+    constant : int
+}
+
+class RangeMultiplicity {
+    start : int
+    end : int
+}
+
+
+CompositeToken ..|> Token
+SimpleToken ..|> Token
+CharacterToken ..|> SimpleToken
+RangeToken ..|> SimpleToken
+AnyToken ..|> SimpleToken
+RootGroup --|> Group
+ChildGroup --|> Group
+ChildGroup --|> GroupElement
+Matcher --|> GroupElement
+DefaultMultiplicity ..|> Multiplicity
+ConstantMultiplicity ..|> Multiplicity
+RangeMultiplicity ..|> Multiplicity
+
+Expression "1" *-- "1" RootGroup : rootGroup
+Group "1" *-- "*" GroupElement : elements
+ChildGroup "*" o-- "1" Multiplicity : multiplicity
+Matcher "*" o-- "1" Multiplicity : multiplicity
+Matcher "1" *-- "1" Token : token
+CompositeToken "1" *-- "*" SimpleToken : tokens
+
+@enduml
