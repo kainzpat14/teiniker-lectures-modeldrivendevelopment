@@ -26,7 +26,7 @@ public class GenericLinkedList<T> {
 		return size;
 	}
 
-	public GenericLinkedList<T> add(T value) {
+	public GenericLinkedList add(T value) {
 		Node node = new Node(value);
 		if (firstNode == null) {
 			firstNode = node;

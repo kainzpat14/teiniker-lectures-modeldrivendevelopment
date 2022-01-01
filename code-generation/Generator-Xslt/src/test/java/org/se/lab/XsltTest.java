@@ -26,7 +26,7 @@ public class XsltTest
 	{
 		process("xml/cpd-report.xml", 
 				"xml/cpdhtml.xslt", 
-				"cpd-retort.html");		
+				"cpd-report.html");
 	}
 	
 	@Test
@@ -34,7 +34,7 @@ public class XsltTest
 	{
 		process("xml/javancss-report.xml", 
 				"xml/javancss2html.xsl", 
-				"javancss-retort.html");		
+				"javancss-report.html");
 	}
 	
 	@Test

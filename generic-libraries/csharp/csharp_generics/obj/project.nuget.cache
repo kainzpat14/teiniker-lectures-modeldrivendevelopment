@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e/wT8j+9cT/Ct861LBnlWR0fNVKNPuopsI7mkr7rN/SQizXj2Ackq2MC/tNApvkb2Nze2JMfAVttcidf1Bh7MQ==",
+  "dgSpecHash": "RIS5JeTvQcABE9uqp4C4R37QLDkbqcRsSIaSZqzSTj3SodRZQZqDrawglaf9b9pfMgItkhST4q4BDDmffQHcpA==",
   "success": true,
-  "projectFilePath": "/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj",
+  "projectFilePath": "/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

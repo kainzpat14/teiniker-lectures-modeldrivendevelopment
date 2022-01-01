@@ -1,32 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj": {}
+    "/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj": {}
   },
   "projects": {
-    "/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj": {
+    "/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj",
+        "projectUniqueName": "/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj",
         "projectName": "csharp_generics",
-        "projectPath": "/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj",
-        "packagesPath": "/Users/patrickkainz/.nuget/packages/",
-        "outputPath": "/Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/",
+        "projectPath": "/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj",
+        "packagesPath": "/home/patrick/.nuget/packages/",
+        "outputPath": "/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/patrickkainz/.nuget/NuGet/NuGet.Config"
+          "/home/patrick/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -37,7 +35,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",
@@ -53,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }

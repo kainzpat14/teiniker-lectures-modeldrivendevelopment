@@ -22,13 +22,16 @@ Complete the TODOs in YmlAttribute and YmlEntity by including the appropriate se
 ### Annotation Processing and Reflections 4pts
 
 Complete the TODOs in ReflectionUtil: 
-- getYmlName should take either a class or a field as parameter and check if an YmlAttribute or YmlEntity annotation is present and if so return the name contained within
+- getYmlName should take either a class or a field as parameter and check if an YmlAttribute 
+  or YmlEntity annotation is present and if so return the name contained within
 - getReadableYmlFields should return a list of all fields with a YmlAttribute. Should you run
   into any problems with field visibilities fix them here. 
 
 ### Generic Implementation 4pts
 
-Using ClientSettingsSerializer as a template and utilizing ReflectionUtil create a generic implementation SettingsSerializer, which will serialize any of the two Settings classes in the model package (and also any future settings classes). 
+Using ClientSettingsSerializer as a template and utilizing ReflectionUtil create a 
+generic implementation SettingsSerializer, which will serialize any of the two Settings 
+classes in the model package (and also any future settings classes). 
 
 Validate your implementation using TestSerializer. 
 

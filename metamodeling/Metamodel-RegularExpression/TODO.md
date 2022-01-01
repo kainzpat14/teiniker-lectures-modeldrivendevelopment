@@ -1,4 +1,4 @@
-# Metamodel Mathematic Regular Expressions
+# Metamodel Regular Expressions
 
 ## Task 
 
@@ -12,16 +12,17 @@ extract certain parts of it.
 
 This domain uses simplified regular expressions: 
 
-Each regular expression contains a root group that can contain a sequence of other groups or matchers. Each child 
-group has a multiplicity (0..1, 0..\*, 1, 1..\*, a fixed number or range). Each matcher consists of a token and a multiplicity.
+Each regular expression contains a root group that can contain a sequence of other groups or matchers. 
+Each child group has a multiplicity (0..1, 0..\*, 1, 1..\*, a fixed number or range). 
+Each matcher consists of a token and a multiplicity.
 
 Each token can either be a simple token like:
 - a character (ex. "a")
 - a range (ex. "a-z")
 - any character (ie. the ".")
 
-Or a composite token that contains simple tokens of which one must occur, for example [a-zA-Z_] allows either a
-character between a and z, A and Z or the character "_". 
+Or a composite token that contains simple tokens of which one must occur, for example [a-zA-Z_] allows 
+either a character between a and z, A and Z or the character "_". 
 
 Example:
 
@@ -37,7 +38,8 @@ Followed by a childgroup with multiplicity 0..1 containing the matchers:
 - a composite token containing the range A-Z with the multiplicity 1
 - a composite token containing the ranges a-z and 0-9 and multiplicity 1..*
 
-This is then followed by another child group with multiplicity 1 containing a composite token with multiplicity 1..* having either:
+This is then followed by another child group with multiplicity 1 containing a composite token with 
+multiplicity 1..* having either:
 - character ! 
 - character . 
 

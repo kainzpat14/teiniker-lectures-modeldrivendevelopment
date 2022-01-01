@@ -10,3 +10,17 @@
 /Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.dll
 /Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.pdb
 /Users/patrickkainz/git/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.genruntimeconfig.cache
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/bin/Debug/netcoreapp3.1/csharp_generics
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/bin/Debug/netcoreapp3.1/csharp_generics.deps.json
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/bin/Debug/netcoreapp3.1/csharp_generics.runtimeconfig.json
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/bin/Debug/netcoreapp3.1/csharp_generics.runtimeconfig.dev.json
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/bin/Debug/netcoreapp3.1/csharp_generics.dll
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/bin/Debug/netcoreapp3.1/csharp_generics.pdb
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.csproj.AssemblyReference.cache
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.GeneratedMSBuildEditorConfig.editorconfig
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.AssemblyInfoInputs.cache
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.AssemblyInfo.cs
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.csproj.CoreCompileInputs.cache
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.dll
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.pdb
+/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/Debug/netcoreapp3.1/csharp_generics.genruntimeconfig.cache

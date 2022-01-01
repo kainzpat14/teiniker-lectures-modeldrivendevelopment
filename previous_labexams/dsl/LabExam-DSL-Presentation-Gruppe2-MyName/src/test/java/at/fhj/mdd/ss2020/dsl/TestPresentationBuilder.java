@@ -75,7 +75,7 @@ public class TestPresentationBuilder {
 
 	private String readExpectedFile() {
 		try {
-			return new String(Files.readAllBytes(Paths.get(this.getClass().getClassLoader().getResource("expected.uml").toURI())));
+			return new String(Files.readAllBytes(Paths.get(this.getClass().getClassLoader().getResource("expected.puml").toURI())));
 		} catch (IOException | URISyntaxException e) {
 			throw new RuntimeException("Error reading expected file", e);
 		}

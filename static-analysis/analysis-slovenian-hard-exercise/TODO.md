@@ -30,24 +30,16 @@ do. Instead, you should prove your understanding of the code:
 This code checks if the diagonal sum of a matrix is 10. 
 ```
 
-## Intro
-
-This one is a difficult one (except for slovenian speaking people), you should not google
-the words and take this as an exercise in understanding obfuscated code. It took me also 
-about 30 minutes to figure it out, something like this will not be part of any exam.
-
 
 ## Tasks
 
 Please complete the following tasks: 
 
-1) Describe what this code helps you do (its something you probably already did at some point in your life).
-Hint Base 64 encoded: SXRzIGEgZ2FtZQ==
-2) Describe how it does that
+1) Describe what this program does in principle (not how it does it)
+2) Create a sample input file for this program
 
 ## Your answers
 
-1)
-2)
-
+1) 
+2) 
 

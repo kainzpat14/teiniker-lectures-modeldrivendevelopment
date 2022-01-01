@@ -55,7 +55,8 @@ Complete the TODOs in ReflectionUtil:
 
 ### Generic Implementation 4pts
 
-Using StatusMessageSerializer as a template and utilizing ReflectionUtil create a generic implementation MessageSerializer, which will serialize any of the three Message classes in the model package (and also any future message classes). 
+Using StatusMessageSerializer as a template and utilizing ReflectionUtil create a generic implementation 
+, which will serialize any of the three Message classes in the model package (and also any future message classes). 
 
 Validate your implementation using TestSerializer. 
 

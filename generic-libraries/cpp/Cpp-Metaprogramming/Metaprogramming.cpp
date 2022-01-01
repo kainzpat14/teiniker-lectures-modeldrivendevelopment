@@ -26,7 +26,6 @@ struct If{
 };
 
 template<int Then,int Else>
-
 struct If<false, Then, Else>{
  const static int value = Else;
 };
@@ -43,7 +42,9 @@ int main(int argc, char **argv) {
 	auto begin= chrono::system_clock::now();
 	cout << FIB_N << "th Fibonacci number: " << fibonacci<FIB_N>::value << endl;
 	auto end= chrono::system_clock::now();
-	cout << "Calc took " << (end - begin).count() << "ms"<<endl;
+
+    std::chrono::duration<double> diff = end - begin;
+	cout << "Calc took " << diff.count()*1000 << "ms"<<endl;
 
 	//its also possible to have the compiler evaluate conditions at compiletime
 	cout << If<isHigher<FIB_N,10>::value, 1, -1>::value << endl;

@@ -4,12 +4,12 @@ using System.Collections.Generic;
 namespace csharp_generics
 {
 
-    interface IBase
+    class Base
     {
 
     }
 
-    class Concrete : IBase
+    class Concrete : Base
     {
         int value;
 
@@ -34,7 +34,7 @@ namespace csharp_generics
 
         // The C# compiler does not destroy the type information after compilation.
         // instead it works similarly to the C++ by compiler, by copying the generic implementation
-        // to a specific one. This way we can even intantiate generic types, provided the type
+        // to a specific one. This way we can even instantiate generic types, provided the type
         // has a default constructor which we ensure via the new() constraint.
         // The getput Problem is also solved differently than in Java, instead of a different inheritance
         // scheme, the compiler does not allow inheritance, instead we must use two types, which are connected
@@ -91,8 +91,8 @@ namespace csharp_generics
         static void Main(string[] args)
         {
             var source = new List<Concrete> { new Concrete(1), new Concrete(2), new Concrete(3) };
-            var target = new List<IBase>();
-            Copy(source, target);
+            var target = new List<Base>();
+            Copy(source,target);
 
             Console.WriteLine(String.Join(",", target));
 

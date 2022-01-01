@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstring>
+
 using namespace std;
 
 // Generics or Templates as they are called in C++ are not only present at compile time, instead
@@ -46,7 +48,7 @@ template <typename T> void print(const T& current) {
 
 // With C++ 11 its even possible to provide a variable list of type parameters.
 // keep in mind that the compiler still uses code generation, so this is not a recursive call
-// but instead the compiler will generate sizeof(Args) - 1 implmentations of this method
+// but instead the compiler will generate sizeof(Args) - 1 implementations of this method
 // which will call each other
 template <typename T, typename... Args> void print(const T& current, const Args&... args) {
 	cout << current << ", ";
@@ -63,10 +65,10 @@ struct coordinate {
 int main(int argc, char **argv) {
 	// our compare method can be used with all kinds of different types now:
 	cout << "comparing 1 and 2: " << compare(1,2) << endl;
-	cout << "comparing 1.0 and 2.0: " << compare(2.0,1.0) << endl;
+	cout << "comparing 1.0 and 2.0: " << compare(1.0,2.0) << endl;
 	// since our method uses the > operator on the calling class and strings in c are const char pointers, this
 	// simply compares pointers
-	cout << "comparing pointers b and a: " << compare("b","a") << endl; //incorrect result: 1, expected -1
+	cout << "comparing pointers a and b: " << compare("a","b") << endl; //incorrect result: 1, expected -1
 	struct coordinate p1 = {1,2};
 	struct coordinate p2 = {3,4};
 	// since code is generated and no inheritance schema like in Java is in place, using such a method with
@@ -83,7 +85,7 @@ int main(int argc, char **argv) {
 	// we can overload templates methods with nontemplated ones, as a result we can perform a correct
 	// comparison between char arrays by providing as separate method for char arrays:
 	cout << "comparing specialized 1 and 2: " << compare2(1,2) << endl;
-	cout << "comparing specialized b and a: " << compare2("b","a") << endl;
+	cout << "comparing specialized a and b: " << compare2("a","b") << endl;
 
 	outputNTimes<2>(">");
 
