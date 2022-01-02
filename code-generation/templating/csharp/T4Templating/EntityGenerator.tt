@@ -1,0 +1,32 @@
+<#@ output extension=".java"#>
+<#@ import namespace="Metamodel" #>
+<#@ import namespace="GeneratorUtils" #>
+package at.fhj.mdd;
+
+public <#= entity.Name.FirstCharToUpper()#> {
+<# foreach (MAttribute attribute in entity.Attributes)
+   {#>
+    private <#= getType(attribute.Type)#> <#= attribute.Name.FirstCharToLower()#>;
+
+    public <#= getType(attribute.Type)#> get<#= attribute.Name.FirstCharToUpper()#>() {
+        return this.<#= attribute.Name.FirstCharToLower()#>;
+    }
+
+    public void set<#= attribute.Name.FirstCharToUpper()#>(<#=getType(attribute.Type)#> <#= attribute.Name.FirstCharToLower()#>) {
+        this.<#= attribute.Name.FirstCharToLower()#> = <#= attribute.Name.FirstCharToLower()#>;
+    }
+
+<#}#>
+    
+    public <#= entity.Name.FirstCharToUpper()#>(<#
+          var index = 0;
+          foreach (MAttribute attribute in entity.Attributes)
+          {#>
+<#if (index > 0) {#>, <#}
+            index++;#><#=getType(attribute.Type)#> <#= attribute.Name.FirstCharToLower()#><#}#>) {
+<#  foreach (MAttribute attribute in entity.Attributes)
+    {#>
+        this.<#= attribute.Name.FirstCharToLower()#> = <#= attribute.Name.FirstCharToLower()#>;
+<#}#>
+    }
+}

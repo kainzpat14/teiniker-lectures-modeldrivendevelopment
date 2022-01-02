@@ -1,0 +1,22 @@
+package org.se.lab;
+{{#entity}}
+public {{#capitalize}}{{name}}{{/capitalize}} {
+    {{#attributes}}
+    private {{type}} {{#decapitalize}}{{name}}{{/decapitalize}};
+
+    public {{type}} get{{#capitalize}}{{name}}{{/capitalize}}() {
+        return this.{{#decapitalize}}{{name}}{{/decapitalize}};
+    }
+
+    public void set{{#capitalize}}{{name}}{{/capitalize}}() {
+        this.{{#decapitalize}}{{name}}{{/decapitalize}} = {{#decapitalize}}{{name}}{{/decapitalize}};
+    }
+    {{/attributes}}
+
+    public {{#capitalize}}{{name}}{{/capitalize}};({{#attributes}}{{type}} {{#decapitalize}}{{name}}{{/decapitalize}}{{^last}}, {{/last}}{{/attributes}}) {
+    {{#attributes}}
+        this.{{#decapitalize}}{{name}}{{/decapitalize}} = {{#decapitalize}}{{name}}{{/decapitalize}};
+    {{/attributes}}
+    }
+}
+{{/entity}}

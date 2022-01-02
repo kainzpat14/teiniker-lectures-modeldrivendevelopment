@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GeneratorUtils\GeneratorUtils.csproj" />
+      <ProjectReference Include="..\Metamodel\Metamodel.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="EntityGenerator.tt">
+        <Generator>TextTemplatingFilePreprocessor</Generator>
+        <LastGenOutput>EntityGenerator.cs</LastGenOutput>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="EntityGenerator.cs">
+        <AutoGen>True</AutoGen>
+        <DesignTime>True</DesignTime>
+        <DependentUpon>EntityGenerator.tt</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.CodeDom" Version="6.0.0" />
+    </ItemGroup>
+
+</Project>

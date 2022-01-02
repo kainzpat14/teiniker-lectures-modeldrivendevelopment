@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "StringInterpolation/1.0.0": {
+        "dependencies": {
+          "GeneratorUtils": "1.0.0",
+          "Metamodel": "1.0.0"
+        },
+        "runtime": {
+          "StringInterpolation.dll": {}
+        }
+      },
+      "GeneratorUtils/1.0.0": {
+        "runtime": {
+          "GeneratorUtils.dll": {}
+        }
+      },
+      "Metamodel/1.0.0": {
+        "runtime": {
+          "Metamodel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StringInterpolation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GeneratorUtils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Metamodel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,21 @@
+package org.se.lab;
+
+public {{capitalize entity.name}} {
+{{#each entity.attributes}}
+    private {{getType this}} {{decapitalize this.name}};
+
+    public {{getType this}} get{{capitalize this.name}}() {
+        return this.{{decapitalize this.name}};
+    }
+
+    public void set{{capitalize this.name}}() {
+        this.{{decapitalize this.name}} = {{decapitalize this.name}};
+    }
+{{/each}}
+
+    public {{capitalize entity.name}}({{#each entity.attributes}}{{getType this}} {{decapitalize this.name}}{{#unless @last}}, {{/unless}}{{/each}}) {
+{{#each entity.attributes}}
+        this.{{decapitalize this.name}} = {{decapitalize this.name}};
+{{/each}}
+    }
+}

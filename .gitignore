@@ -7,3 +7,9 @@ target/
 jdbc.properties
 src/generated/
 src/gen/
+node_modules
+apphost
+*.cache
+*.dll
+*.pdb
+obj
