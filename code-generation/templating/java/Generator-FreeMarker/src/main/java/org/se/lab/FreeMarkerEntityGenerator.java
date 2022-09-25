@@ -52,20 +52,15 @@ public class FreeMarkerEntityGenerator {
 	}
 
 	private void addAttributeTypeMethod(Map<String, Object> root) {
-		TemplateMethodModelEx attributeType = new TemplateMethodModelEx() {
-
-			@Override
-			public Object exec(List arguments) throws TemplateModelException {
-				MType type = (MType) ((StringModel) arguments.get(0)).getWrappedObject();
-				if (type instanceof MString) {
-					return "String";
-				} else if (type instanceof MInteger) {
-					return "int";
-				} else {
-					throw new IllegalArgumentException("UnsupportedType: " + type.getClass().getName());
-				}
+		TemplateMethodModelEx attributeType = arguments -> {
+			MType type = (MType) ((StringModel) arguments.get(0)).getWrappedObject();
+			if (type instanceof MString) {
+				return "String";
+			} else if (type instanceof MInteger) {
+				return "int";
+			} else {
+				throw new IllegalArgumentException("UnsupportedType: " + type.getClass().getName());
 			}
-
 		};
 		root.put("attributeType", attributeType);
 	}

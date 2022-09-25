@@ -1,0 +1,47 @@
+@startuml
+
+interface CurrentSource {
+}
+
+class Input {
+	String name
+}
+
+class Circuit {
+}
+
+abstract class BinaryOperation {
+}
+
+class And {
+}
+
+class Or {
+}
+
+class Not {
+}
+
+class CircuitReuse {
+}
+
+Input ..|> CurrentSource
+CircuitReuse ..|> CurrentSource
+And ..|> CurrentSource
+Or ..|> CurrentSource
+Not ..|> CurrentSource
+And --|> BinaryOperation
+Or --|> BinaryOperation
+
+Circuit "0..1" o-- "1" CurrentSource : output;
+Circuit "1" *-- "1..*" Input : inputs;
+CircuitReuse "*" o-- "1" Circuit : circuit;
+CircuitReuse "*" o-- "1..*" CurrentSource: inputs;
+note right on link
+constraint: circuit.inputs.size = circuitReuse.inputs.size
+end note
+BinaryOperation "*" o-- "2" CurrentSource : inputs;
+Not "*" o-- "1" CurrentSource : input;
+
+
+@enduml

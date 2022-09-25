@@ -13,3 +13,4 @@ apphost
 *.dll
 *.pdb
 obj
+*.iml
