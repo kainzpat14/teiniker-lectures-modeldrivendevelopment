@@ -29,7 +29,7 @@ Complete the TODOs in ReflectionUtil:
 
 ### Generic Implementation 4pts
 
-Using ClientSettingsStorage as a template and utilizing ReflectionUtil create a generic implementation SettingsStorage, which will render any of the two Settings classes in the model package (and also any future settings classes). 
+Using ConnectionSettingsStorage as a template and utilizing ReflectionUtil create a generic implementation SettingsStorage, which will render any of the two Settings classes in the model package (and also any future settings classes). 
 
 Validate your implementation using TestStorage. 
 
