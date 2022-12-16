@@ -19,7 +19,8 @@ public class PackageBuilderTest
 		.iface("Stack").isPublic()
 			.operation("push").asVoid().parameter("value").asInt()
 			.operation("pop").asInt()
-			.operation("top").asInt().operation("isEmpty").asBoolean()
+			.operation("top").asInt()
+			.operation("isEmpty").asBoolean()
 			.operation("isFull").asBoolean()
 		.toPackage();
 	}
