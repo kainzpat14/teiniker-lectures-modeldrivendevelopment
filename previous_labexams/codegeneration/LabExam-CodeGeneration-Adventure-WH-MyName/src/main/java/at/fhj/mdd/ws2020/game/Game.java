@@ -124,7 +124,7 @@ public class Game {
 
 	public void goToRoom(String room) {
 		currentRoom = game.getRooms().stream().filter(roomObj -> roomObj.getName().contentEquals(room)).findFirst()
-				.orElseThrow();
+				.orElseThrow(() -> new IllegalArgumentException("Room not found: " + room));
 	}
 
 	public void addToInventory(String item, int count) {

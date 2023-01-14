@@ -32,7 +32,7 @@ public class TestExecutor {
 				.toGame();
 		// @formatter:on
 		new Game(game, game.getRooms().stream().filter(room -> room.getName().contentEquals("Entrance")).findFirst()
-				.orElseThrow(), new ExampleInteractionExecutor()).gameLoop();
+				.orElseThrow(() -> new IllegalArgumentException("No Entrance found")), new ExampleInteractionExecutor()).gameLoop();
 	}
 
 	@Test
@@ -63,7 +63,7 @@ public class TestExecutor {
 				.toGame();	
 		// @formatter:on
 		Game gameInstance = new Game(game, game.getRooms().stream()
-				.filter(room -> room.getName().contentEquals("Attic")).findFirst().orElseThrow(),
+				.filter(room -> room.getName().contentEquals("Attic")).findFirst().orElseThrow(() -> new IllegalArgumentException("No Attic found")),
 				new GameInteractionExecutor());
 		gameInstance.addToInventory("Lighter", 1);
 		gameInstance.gameLoop();

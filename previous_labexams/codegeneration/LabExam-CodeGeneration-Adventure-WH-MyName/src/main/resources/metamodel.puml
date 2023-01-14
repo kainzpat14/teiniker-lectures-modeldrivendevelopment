@@ -1,0 +1,60 @@
+@startuml
+
+class Game {
+}
+
+class DescribedItem {
+	String name
+	String text
+}
+
+class Item {
+}
+
+class Room {
+}
+
+class Object {
+}
+
+class Interaction {
+}
+
+class Precondition {
+	int requiredQuantity
+}
+
+interface Occurrence {
+}
+
+class TextOccurrence {
+	String text
+}
+
+class TransportOccurrence {
+}
+
+class InventoryOccurrence {
+	int count
+}
+
+Game *-- "*" Item : items
+Game *-- "*" Room : rooms
+Room *-- "*" Object : objects
+Object *-- "*" Interaction : interactions
+Interaction *-- "0..1" Precondition : precondition
+Interaction *-- "*" Occurrence : occurences
+Precondition o-- "1" Item : item
+InventoryOccurrence o-- "1" Item : item
+TransportOccurrence o-- "1" Room : room
+
+Room --|> DescribedItem
+Item --|> DescribedItem
+Object --|> DescribedItem
+Interaction --|> DescribedItem
+
+TextOccurrence ..|> Occurrence
+TransportOccurrence ..|> Occurrence
+InventoryOccurrence ..|> Occurrence
+
+@enduml
