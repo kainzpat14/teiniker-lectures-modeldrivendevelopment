@@ -1,7 +1,7 @@
 TODO: Generator mittels Visitor Pattern
 ---------------------------------------------------------------------
 
-Das vorliegende Projekt verwendet das "Metamodel-Entiy" Module, d.h.
+Das vorliegende Projekt verwendet das "Metamodel-Entity" Module, d.h.
 die Implementierung des Entity-Metamodels liegt bereits vor.
 
 Implementieren Sie die folgenden Code Generatoren durch Anwendung
