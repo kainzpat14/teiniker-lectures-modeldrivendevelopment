@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj": {}
+    "/home/fh/OneDrive/FH/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj": {}
   },
   "projects": {
-    "/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj": {
+    "/home/fh/OneDrive/FH/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj",
+        "projectUniqueName": "/home/fh/OneDrive/FH/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj",
         "projectName": "csharp_generics",
-        "projectPath": "/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj",
-        "packagesPath": "/home/patrick/.nuget/packages/",
-        "outputPath": "/home/patrick/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/",
+        "projectPath": "/home/fh/OneDrive/FH/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/csharp_generics.csproj",
+        "packagesPath": "/home/fh/.nuget/packages/",
+        "outputPath": "/home/fh/OneDrive/FH/projects/fh/ws2021/teiniker-lectures-modeldrivendevelopment/generic-libraries/csharp/csharp_generics/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/patrick/.nuget/NuGet/NuGet.Config"
+          "/home/fh/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -35,16 +35,15 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -53,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.122/RuntimeIdentifierGraph.json"
         }
       }
     }
