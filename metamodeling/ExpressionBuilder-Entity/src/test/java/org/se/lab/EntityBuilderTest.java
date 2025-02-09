@@ -9,7 +9,8 @@ import org.se.lab.metamodel.MProperty;
 import org.se.lab.metamodel.MString;
 
 
-public class EntityBuilderTest
+public class
+EntityBuilderTest
 {
 	private MEntity entity;
 	
