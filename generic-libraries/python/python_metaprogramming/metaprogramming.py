@@ -1,4 +1,3 @@
-from cProfile import label
 
 
 def entity_persist(self, cls, dict):
