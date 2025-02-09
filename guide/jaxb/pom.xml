@@ -34,33 +34,6 @@
 			        </execution>
 			    </executions>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jaxb2-maven-plugin</artifactId>
-				<version>1.5</version>
-				<executions>
-					<execution>
-						<id>schemagen</id>
-						<goals>
-							<goal>schemagen</goal>
-						</goals>
-					</execution>
-				</executions>
-
-				<configuration>
-					<transformSchemas>
-						<transformSchema>
-							<uri>https://org.se.lab/student</uri>
-							<toPrefix>student</toPrefix>
-							<toFile>Student.xsd</toFile>
-						</transformSchema>
-					</transformSchemas>
-					<includes>
-						<include>org/se/lab/model/*</include>
-					</includes>
-					<verbose>true</verbose>
-				</configuration>
-			</plugin>
   		</plugins>
   	</build>
 
