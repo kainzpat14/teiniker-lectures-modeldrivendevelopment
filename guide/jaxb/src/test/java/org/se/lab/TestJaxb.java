@@ -29,7 +29,7 @@ public class TestJaxb {
 
     @Test
     public void testUnmarshal() throws JAXBException {
-        String message = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><student firstName=\"Hansi\" lastName=\"Hubertson\"><user username=\"hansi\" password=\"meipassword\"/></student>";
+        String message = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><student first-name=\"Hansi\" last-name=\"Hubertson\"><user username=\"hansi\" password=\"meipassword\"/></student>";
         JAXBContext ctx = JAXBContext.newInstance(Student.class);
         Unmarshaller unmarshaller = ctx.createUnmarshaller();
         Student student = (Student) unmarshaller.unmarshal(new StringReader(message));

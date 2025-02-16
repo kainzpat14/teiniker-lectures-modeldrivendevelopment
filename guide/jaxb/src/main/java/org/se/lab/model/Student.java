@@ -3,12 +3,12 @@ package org.se.lab.model;
 import javax.xml.bind.annotation.*;
 import java.util.Objects;
 
-@XmlRootElement
+@XmlRootElement(name = "student")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Student {
-    @XmlAttribute
+    @XmlAttribute(name = "first-name")
     private String firstName;
-    @XmlAttribute
+    @XmlAttribute(name = "last-name")
     private String lastName;
     @XmlElement(name = "user")
     private User user;

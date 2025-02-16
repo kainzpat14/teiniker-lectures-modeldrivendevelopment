@@ -28,7 +28,7 @@ public class TestCustom {
 
     @Test
     public void testUnmarshal() throws JAXBException {
-        String message = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><student firstName=\"Hansi\" lastName=\"Hubertson\"><user username=\"hansi\" password=\"meipassword\"/></student>";
+        String message = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><student first-name=\"Hansi\" last-name=\"Hubertson\"><user username=\"hansi\" password=\"meipassword\"/></student>";
         CustomMarshaller unmarshaller = new CustomMarshaller();
         Student student = unmarshaller.unmarshal(message, Student.class);
         System.out.println(student);
