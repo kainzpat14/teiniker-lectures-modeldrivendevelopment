@@ -8,12 +8,12 @@ public class BuilderTest {
     public void test() {
         new EntitiesBuilder()
                 .entity("User")
-                .attribute("firstname").string()
-                .attribute("lastname").string()
+                    .attribute("username").string()
+                    .attribute("password").string()
                 .entity("Student")
-                .attribute("username").string()
-                .attribute("password").string()
-                .attribute("user").reference("User")
+                    .attribute("firstname").string()
+                    .attribute("lastname").string()
+                    .attribute("user").reference("User")
                 .generate();
     }
 }
