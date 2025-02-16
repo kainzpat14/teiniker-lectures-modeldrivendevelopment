@@ -30,7 +30,7 @@ Game 1:
 Quest "Rescue the maiden", "The maiden has been locked away in the tower, free her!"
 
 Step "Find the key" "The tower is locked! We must find the key"
-- Grather 1 piece of Entity with name "Key"
+- Gather 1 piece of Entity with name "Key"
 
 Step "Kill the ghost holding the maiden" "A ghost is between you and the maiden, slay it!" requires previous step
 - Kill 1 occurrence of Entity with name "Ghost"
