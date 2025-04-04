@@ -1,0 +1,53 @@
+@startuml
+object MInstaller001
+
+object MShellStep001{
+	script = "cleanTempFiles.sh"
+}
+
+MInstaller001 o-- MShellStep001 : cleanupSteps
+object MOutputStep001{
+	header = "Done!"
+	text = "Installation complete"
+}
+
+MInstaller001 o-- MOutputStep001 : cleanupSteps
+object MOutputStep002{
+	header = "Welcome to the installation"
+	text = "We are installing your cool product now!"
+}
+
+MInstaller001 o-- MOutputStep002 : preSetupSteps
+object MShellStep002{
+	script = "prepSystem.sh"
+}
+
+MInstaller001 o-- MShellStep002 : preSetupSteps
+object MInstallerStep001
+
+object MCreateFolderStep001{
+	folder = "/opt/myapplication"
+}
+
+MInstallerStep001 o-- MCreateFolderStep001 : installStep
+object MShellStep003{
+	script = "cleanupAppDir.sh"
+}
+
+MInstallerStep001 o-- MShellStep003 : cleanupStep
+MInstaller001 o-- MInstallerStep001 : setupSteps
+object MInstallerStep002
+
+object MCopyStep001{
+	source = "binary"
+	destination = "/opt/myapplication/binary"
+}
+
+MInstallerStep002 o-- MCopyStep001 : installStep
+object MShellStep004{
+	script = "cleanupAppDir.sh"
+}
+
+MInstallerStep002 o-- MShellStep004 : cleanupStep
+MInstaller001 o-- MInstallerStep002 : setupSteps
+@enduml
