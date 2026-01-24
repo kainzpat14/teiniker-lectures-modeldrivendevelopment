@@ -104,10 +104,28 @@ The following projects are intentionally excluded from compilation checks as the
   - `analysis-structure-validator-exercise`
   - `analysis-tictactoe-exercise`
 
+## Java 21 Migration
+
+### Additional Upgrades for Java 21
+All 165 Maven projects have been updated to use Java 21.
+
+**Plugin and Dependency Upgrades:**
+- `maven-compiler-plugin`: Upgraded to 3.11.0 (supports Java 21)
+- All projects: Updated `<source>` and `<target>` to 21
+- AspectJ projects (2): Set compliance level to 17 (highest supported by aspectj-maven-plugin 1.14.0)
+  - Added aspectjtools 1.9.22.1 as plugin dependency
+  - Updated aspectjrt and aspectjweaver to 1.9.22.1
+- Groovy project (1): Switched to gmavenplus-plugin 1.13.1
+  - Updated Groovy from 3.0.3 to 4.0.6 (org.apache.groovy)
+
+**Compilation Results with Java 21:**
+- ✓ All 102 testable projects compile successfully
+- AspectJ projects use Java 17 compliance but run on Java 21 (backward compatible)
+
 ## Notes
-- All changes have been made but **not committed**
-- The repository is fully compatible with Java 17
+- The repository is fully compatible with Java 21
 - All dependency relationships between internal projects have been documented and satisfied
-- Total of 25 projects required fixes:
+- Total of 28 projects required fixes:
   - 18 projects: dependency installation
   - 7 projects: plugin upgrades for Java 17 compatibility
+  - 3 projects: additional upgrades for Java 21 compatibility

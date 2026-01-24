@@ -8,25 +8,26 @@
 		<plugins>
 			<plugin>
 		        <artifactId>maven-compiler-plugin</artifactId>
-		        <version>3.6.2</version>
+		        <version>3.11.0</version>
 		        <configuration>
-		          <source>1.8</source>
-				  <target>1.8</target>
-		          <compilerId>groovy-eclipse-compiler</compilerId>
-		          <failOnWarning>true</failOnWarning>
+		          <source>21</source>
+				  <target>21</target>
 		        </configuration>
-		        <dependencies>
-		          <dependency>
-		            <groupId>org.codehaus.groovy</groupId>
-		            <artifactId>groovy-eclipse-compiler</artifactId>
-		            <version>3.6.0-03</version>
-		          </dependency>
-		          <dependency>
-		            <groupId>org.codehaus.groovy</groupId>
-		            <artifactId>groovy-eclipse-batch</artifactId>
-		            <version>3.0.3-01</version>
-		          </dependency>
-		        </dependencies>
+		      </plugin>
+		      <plugin>
+		        <groupId>org.codehaus.gmavenplus</groupId>
+		        <artifactId>gmavenplus-plugin</artifactId>
+		        <version>1.13.1</version>
+		        <executions>
+		          <execution>
+		            <goals>
+		              <goal>addSources</goal>
+		              <goal>addTestSources</goal>
+		              <goal>compile</goal>
+		              <goal>compileTests</goal>
+		            </goals>
+		          </execution>
+		        </executions>
 		      </plugin>
 		</plugins>
 	</build>
@@ -44,9 +45,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-		    <groupId>org.codehaus.groovy</groupId>
+		    <groupId>org.apache.groovy</groupId>
 		    <artifactId>groovy</artifactId>
-		    <version>3.0.3</version>
+		    <version>4.0.6</version>
 		</dependency>
 	</dependencies>
 </project>
