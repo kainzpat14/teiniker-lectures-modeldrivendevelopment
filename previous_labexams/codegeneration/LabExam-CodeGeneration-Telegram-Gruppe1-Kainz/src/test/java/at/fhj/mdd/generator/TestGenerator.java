@@ -28,7 +28,7 @@ public class TestGenerator {
 		try {
 			Path actual = Files.createTempDirectory("generated_").toAbsolutePath();
 			System.out.println("Generating to " + actual.toString());
-			new TelegramClassGenerator("at.fhj.mdd.ss2020", actual.toString()).visit(telegrams);
+			new TelegramClassGenerator("at.fhj.mdd", actual.toString()).visit(telegrams);
 
 			Path expected = Files.createTempDirectory("expected_").toAbsolutePath();
 			ResourceDirectoryUtil.copyContentOfResourcesRecursively(

@@ -29,7 +29,7 @@ public class PipelineGeneratorVisitor extends AbstractPipelineVisitor {
 			pipelineWriter.close();
 
 			PrintWriter writer = new PrintWriter(
-					Files.newBufferedWriter(Paths.get("src/gen/java/at/fhj/mdd/ws2020/FunctionPipeline.java")));
+					Files.newBufferedWriter(Paths.get("src/gen/java/at/fhj/mdd/FunctionPipeline.java")));
 			writer.println("package at.fhj.mdd;");
 			writer.println();
 			writer.println("import java.math.BigDecimal;");

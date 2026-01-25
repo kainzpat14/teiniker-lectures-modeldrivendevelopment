@@ -1,7 +1,7 @@
-package at.fhj.mdd.ss2020;
+package at.fhj.mdd;
 
-import at.fhj.mdd.ss2020.annotations.FieldMapping;
-import at.fhj.mdd.ss2020.annotations.TelegramMapping;
+import at.fhj.mdd.annotations.FieldMapping;
+import at.fhj.mdd.annotations.TelegramMapping;
 
 @TelegramMapping(elementName = "TRANSPORT")
 public class TransportTelegram {

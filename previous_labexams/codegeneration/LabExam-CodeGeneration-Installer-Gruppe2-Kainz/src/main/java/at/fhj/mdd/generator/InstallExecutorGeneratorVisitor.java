@@ -21,7 +21,7 @@ public class InstallExecutorGeneratorVisitor extends AbstractInstallerVisitor {
 	public void visit(MInstaller installer) {
 		try {
 			writer = new PrintWriter(
-					Files.newBufferedWriter(Paths.get("src/gen/java/at/fhj/mdd/ws2020/MyInstallExecutor.java")));
+					Files.newBufferedWriter(Paths.get("src/gen/java/at/fhj/mdd/MyInstallExecutor.java")));
 			writer.println("package at.fhj.mdd;");
 			writer.println();
 			writer.println("import at.fhj.mdd.installer.InstallExecutor;");

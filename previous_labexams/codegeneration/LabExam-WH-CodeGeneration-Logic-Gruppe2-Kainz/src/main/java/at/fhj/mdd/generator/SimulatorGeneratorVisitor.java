@@ -22,7 +22,7 @@ public class SimulatorGeneratorVisitor extends AbstractModelVisitor {
 	public void visit(MModel model) {
 		try {
 			writer = new PrintWriter(
-					Files.newBufferedWriter(Paths.get("src/gen/java/at/fhj/mdd/ss2020/CircuitSimulator.java")));
+					Files.newBufferedWriter(Paths.get("src/gen/java/at/fhj/mdd/CircuitSimulator.java")));
 			writer.println("package at.fhj.mdd;");
 			writer.println();
 			writer.println("public class CircuitSimulator {");

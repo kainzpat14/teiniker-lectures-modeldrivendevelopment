@@ -22,7 +22,7 @@ public class SimulatorGeneratorVisitor extends AbstractJobVisitor {
 	public void visit(MJob job) {
 		try {
 			writer = new PrintWriter(Files.newBufferedWriter(
-					Paths.get("src/gen/java/at/fhj/mdd/ss2020/" + job.getName() + "Simulator.java")));
+					Paths.get("src/gen/java/at/fhj/mdd/" + job.getName() + "Simulator.java")));
 			writer.println("package at.fhj.mdd;");
 			writer.println();
 			writer.println("import java.util.Arrays;");

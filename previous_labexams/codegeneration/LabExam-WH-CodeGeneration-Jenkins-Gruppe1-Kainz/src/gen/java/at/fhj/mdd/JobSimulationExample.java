@@ -38,7 +38,7 @@ public class JobSimulationExample implements IJobSimulation {
 		if (!simulator.maven("clean")) {
 			return false;
 		}
-		if (!simulator.maven("install deploy")) {
+		if (!simulator.maven("clean install deploy")) {
 			return false;
 		}
 		return true;

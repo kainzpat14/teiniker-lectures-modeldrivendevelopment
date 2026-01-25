@@ -17,7 +17,6 @@ import lombok.Cleanup;
 import lombok.NonNull;
 import lombok.SneakyThrows;
 import lombok.val;
-import lombok.var;
 
 public class LombokTest {
 	@Test
@@ -29,14 +28,14 @@ public class LombokTest {
 		System.out.println(ageObj.getClass().getSimpleName());
 	}
 
-	@Test
-	public void testVar() {
-		var age = 27;
-		age = 28;
-
-		Object ageObj = age;
-		System.out.println(ageObj.getClass().getSimpleName());
-	}
+	// lombok.var is incompatible with Java 21's built-in var keyword
+	// @Test
+	// public void testVar() {
+	// 	var age = 27;
+	// 	age = 28;
+	// 	Object ageObj = age;
+	// 	System.out.println(ageObj.getClass().getSimpleName());
+	// }
 
 	@Test
 	public void testNullable() {

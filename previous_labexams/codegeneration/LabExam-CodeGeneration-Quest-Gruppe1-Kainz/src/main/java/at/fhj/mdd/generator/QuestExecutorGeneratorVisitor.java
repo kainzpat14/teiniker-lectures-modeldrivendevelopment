@@ -24,7 +24,7 @@ public class QuestExecutorGeneratorVisitor extends AbstractGameVisitor {
 		try {
 			String className = getClassName(quest.getShortDescription());
 			writer = new PrintWriter(
-					Files.newBufferedWriter(Paths.get("src/gen/java/at/fhj/mdd/ws2020/" + className + ".java")));
+					Files.newBufferedWriter(Paths.get("src/gen/java/at/fhj/mdd/" + className + ".java")));
 			writer.println("package at.fhj.mdd;");
 			writer.println();
 			writer.println("import at.fhj.mdd.game.Player;");

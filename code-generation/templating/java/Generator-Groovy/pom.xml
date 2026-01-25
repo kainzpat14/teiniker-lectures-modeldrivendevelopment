@@ -18,12 +18,36 @@
 		        <groupId>org.codehaus.gmavenplus</groupId>
 		        <artifactId>gmavenplus-plugin</artifactId>
 		        <version>1.13.1</version>
+		        <configuration>
+		          <sources>
+		            <source>
+		              <directory>${project.basedir}/src/main/java</directory>
+		              <includes>
+		                <include>**/*.groovy</include>
+		              </includes>
+		            </source>
+		          </sources>
+		          <testSources>
+		            <source>
+		              <directory>${project.basedir}/src/test/java</directory>
+		              <includes>
+		                <include>**/*.groovy</include>
+		              </includes>
+		            </source>
+		          </testSources>
+		        </configuration>
 		        <executions>
 		          <execution>
+		            <id>compile-groovy</id>
+		            <phase>generate-sources</phase>
 		            <goals>
-		              <goal>addSources</goal>
-		              <goal>addTestSources</goal>
 		              <goal>compile</goal>
+		            </goals>
+		          </execution>
+		          <execution>
+		            <id>compile-groovy-tests</id>
+		            <phase>generate-test-sources</phase>
+		            <goals>
 		              <goal>compileTests</goal>
 		            </goals>
 		          </execution>
@@ -47,7 +71,7 @@
 		<dependency>
 		    <groupId>org.apache.groovy</groupId>
 		    <artifactId>groovy</artifactId>
-		    <version>4.0.6</version>
+		    <version>4.0.23</version>
 		</dependency>
 	</dependencies>
 </project>
