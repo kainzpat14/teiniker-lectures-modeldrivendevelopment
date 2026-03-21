@@ -1,0 +1,39 @@
+// E-Commerce Domain
+
+entity Customer {
+    name:     string
+    email:    string
+    age:      int
+    active:   boolean
+}
+
+entity Address {
+    street:   string
+    city:     string
+    zipCode:  string
+    // Many-to-one: each address belongs to one customer
+    customer -> Customer
+}
+
+entity Product {
+    name:        string
+    description: string
+    price:       float
+    stock:       int
+}
+
+entity Order {
+    orderNumber: string
+    orderDate:   date
+    totalAmount: float
+    // Many-to-one: each order belongs to one customer
+    customer -> Customer
+}
+
+entity OrderItem {
+    quantity:  int
+    unitPrice: float
+    // Many-to-one: each item belongs to one order and references one product
+    order   -> Order
+    product -> Product
+}

@@ -1,0 +1,47 @@
+{
+  "name": "entity-dsl",
+  "scopeName": "source.entity-dsl",
+  "fileTypes": [
+    ".entity"
+  ],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "name": "keyword.control.entity-dsl",
+      "match": "\\b(boolean|date|entity|float|int|string)\\b"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.entity-dsl",
+          "begin": "/\\*",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.entity-dsl"
+            }
+          },
+          "end": "\\*/",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.entity-dsl"
+            }
+          }
+        },
+        {
+          "begin": "//",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.whitespace.comment.leading.entity-dsl"
+            }
+          },
+          "end": "(?=$)",
+          "name": "comment.line.entity-dsl"
+        }
+      ]
+    }
+  }
+}

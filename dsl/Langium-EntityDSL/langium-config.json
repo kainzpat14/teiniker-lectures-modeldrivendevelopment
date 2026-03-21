@@ -1,0 +1,14 @@
+{
+    "projectName": "EntityDsl",
+    "languages": [
+        {
+            "id": "entity-dsl",
+            "grammar": "src/language/entity-dsl.langium",
+            "fileExtensions": [".entity"],
+            "textMate": {
+                "out": "syntaxes/entity-dsl.tmLanguage.json"
+            }
+        }
+    ],
+    "out": "src/language/generated"
+}

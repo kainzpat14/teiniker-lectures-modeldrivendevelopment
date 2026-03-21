@@ -1,0 +1,52 @@
+{
+    "name": "entity-dsl",
+    "displayName": "Entity DSL",
+    "publisher": "teiniker",
+    "description": "VS Code extension for the Entity DSL - entities, properties and many-to-one relationships.",
+    "version": "0.0.1",
+    "type": "module",
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": ["Programming Languages"],
+    "activationEvents": [],
+    "main": "./out/extension.cjs",
+    "contributes": {
+        "languages": [
+            {
+                "id": "entity-dsl",
+                "aliases": ["Entity DSL", "entity-dsl"],
+                "extensions": [".entity"],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "entity-dsl",
+                "scopeName": "source.entity-dsl",
+                "path": "./syntaxes/entity-dsl.tmLanguage.json"
+            }
+        ]
+    },
+    "scripts": {
+        "langium:generate": "langium generate",
+        "build": "npm run langium:generate && node esbuild.mjs",
+        "watch": "node esbuild.mjs --watch",
+        "typecheck": "tsc -p tsconfig.json --noEmit",
+        "vscode:prepublish": "npm run build -- --minify",
+        "package": "vsce package --no-dependencies"
+    },
+    "dependencies": {
+        "langium": "^3.1.0",
+        "vscode-languageclient": "^9.0.1",
+        "vscode-languageserver": "^9.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "^18.0.0",
+        "@types/vscode": "^1.74.0",
+        "@vscode/vsce": "^2.22.0",
+        "esbuild": "^0.20.0",
+        "langium-cli": "^3.1.0",
+        "typescript": "^5.3.3"
+    }
+}

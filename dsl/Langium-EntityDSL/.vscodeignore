@@ -1,0 +1,10 @@
+.vscode-test/
+src/
+node_modules/
+out/**
+!out/extension.cjs
+!out/language-server/main.cjs
+tsconfig.json
+esbuild.mjs
+langium-config.json
+.eslintrc.json
