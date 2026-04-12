@@ -21,3 +21,6 @@ damit folgender Ausdruck möglich wird:
 
 Beachte: In Java ist die Verwendung von interface, int, etc. problematisch,
 daher werden andere Schreibweisen gewält, zB: iface.
+
+
+PRECONDITION: Please import Maven Project Metamodel-Interface!

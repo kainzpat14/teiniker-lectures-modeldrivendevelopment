@@ -1,0 +1,16 @@
+{
+    "projectName": "DtoDefinition",
+    "languages": [
+        {
+            "id": "dto-definition",
+            "grammar": "src/dto-definition.langium",
+            "fileExtensions": [
+                "dto"
+            ],
+            "textMate": {
+                "out": "syntaxes/dto-definition.tmLanguage.json"
+            }
+        }
+    ],
+    "out": "src/generated"
+}
