@@ -3,7 +3,7 @@ import { createDtoDefinitionServices, DtoDefinitionLanguageMetaData } from 'dto-
 import chalk from 'chalk';
 import { Command } from 'commander';
 import { extractAstNode } from './util.js';
-import { generateJavaScript } from './generator.js';
+import { generateJava } from './generator.js';
 import { NodeFileSystem } from 'langium/node';
 import * as url from 'node:url';
 import * as fs from 'node:fs/promises';
@@ -16,8 +16,8 @@ const packageContent = await fs.readFile(packagePath, 'utf-8');
 export const generateAction = async (fileName: string, opts: GenerateOptions): Promise<void> => {
     const services = createDtoDefinitionServices(NodeFileSystem).DtoDefinition;
     const model = await extractAstNode<Model>(fileName, services);
-    const generatedFilePath = generateJavaScript(model, fileName, opts.destination);
-    console.log(chalk.green(`JavaScript code generated successfully: ${generatedFilePath}`));
+    const generatedFilePaths = generateJava(model, fileName, opts.destination);
+    console.log(chalk.green(`Java code generated successfully: ${generatedFilePaths.join(', ')}`));
 };
 
 export type GenerateOptions = {

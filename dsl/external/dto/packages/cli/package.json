@@ -17,12 +17,14 @@
     },
     "scripts": {
         "clean": "shx rm -fr *.tsbuildinfo out",
-        "build": "echo 'No build step'",
-        "build:clean": "npm run clean && npm run build"
+        "build": "tsc -p tsconfig.json",
+        "build:clean": "npm run clean && npm run build",
+        "test-generate": "npm run build && node bin/cli.js generate ./example.dto"
     },
     "dependencies": {
-        "dto-definition-language": "0.0.1",
         "chalk": "~5.3.0",
-        "commander": "~11.1.0"
+        "commander": "~11.1.0",
+        "dto-definition-language": "0.0.1",
+        "handlebars": "^4.7.9"
     }
 }
