@@ -1,0 +1,4 @@
+package at.fhj;
+
+public record {{name}}({{#fields}}{{toJavaType type}} {{name}}{{#unless @last}}, {{/unless}}{{/fields}}) {
+}

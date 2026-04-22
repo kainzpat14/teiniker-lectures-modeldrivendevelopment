@@ -1,0 +1,9 @@
+dto Person {
+    firstName : String
+    lastName : String
+}
+
+dto Student {
+    person : Person
+    matNr : Int
+}
