@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <root nodeRef="r:0500737b-eb73-4500-9e5d-b39dfeb69305(DTO.sandbox)/3690640395141738948">
+    <file name="Person.java">
+      <node id="3690640395141738949" at="8,0,9,0" concept="1" trace="myFirstName" />
+      <node id="3690640395141738949" at="9,32,10,28" concept="3" />
+      <node id="3690640395141738949" at="12,44,13,29" concept="0" />
+      <node id="3690640395141738949" at="15,45,16,25" concept="0" />
+      <node id="3690640395141738949" at="16,25,17,17" concept="3" />
+      <node id="3690640395141738949" at="21,27,22,30" concept="3" />
+      <node id="3690640395141738949" at="24,37,25,29" concept="0" />
+      <node id="3690640395141738949" at="29,0,30,0" concept="1" trace="myLastName" />
+      <node id="3690640395141738949" at="30,31,31,27" concept="3" />
+      <node id="3690640395141738949" at="33,43,34,28" concept="0" />
+      <node id="3690640395141738949" at="36,44,37,24" concept="0" />
+      <node id="3690640395141738949" at="37,24,38,17" concept="3" />
+      <node id="3690640395141738949" at="42,27,43,29" concept="3" />
+      <node id="3690640395141738949" at="45,37,46,28" concept="0" />
+      <node id="3690640395141738949" at="9,0,12,0" concept="2" trace="getFirstName#()Ljava/lang/String;" />
+      <node id="3690640395141738949" at="12,0,15,0" concept="2" trace="_setFirstName#(Ljava/lang/String;)V" />
+      <node id="3690640395141738949" at="21,0,24,0" concept="2" trace="get#()Ljava/lang/String;" />
+      <node id="3690640395141738949" at="24,0,27,0" concept="2" trace="set#(Ljava/lang/String;)V" />
+      <node id="3690640395141738949" at="30,0,33,0" concept="2" trace="getLastName#()Ljava/lang/String;" />
+      <node id="3690640395141738949" at="33,0,36,0" concept="2" trace="_setLastName#(Ljava/lang/String;)V" />
+      <node id="3690640395141738949" at="42,0,45,0" concept="2" trace="get#()Ljava/lang/String;" />
+      <node id="3690640395141738949" at="45,0,48,0" concept="2" trace="set#(Ljava/lang/String;)V" />
+      <node id="3690640395141738949" at="15,0,19,0" concept="2" trace="setFirstName#(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="3690640395141738949" at="36,0,40,0" concept="2" trace="setLastName#(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="3690640395141738949" at="19,46,27,6" concept="3" />
+      <node id="3690640395141738949" at="40,45,48,6" concept="3" />
+      <node id="3690640395141738949" at="19,0,29,0" concept="2" trace="refToFirstName#()Ljetbrains/mps/references/Reference;" />
+      <node id="3690640395141738949" at="40,0,50,0" concept="2" trace="refToLastName#()Ljetbrains/mps/references/Reference;" />
+      <scope id="3690640395141738949" at="9,32,10,28" />
+      <scope id="3690640395141738949" at="12,44,13,29" />
+      <scope id="3690640395141738949" at="21,27,22,30" />
+      <scope id="3690640395141738949" at="24,37,25,29" />
+      <scope id="3690640395141738949" at="30,31,31,27" />
+      <scope id="3690640395141738949" at="33,43,34,28" />
+      <scope id="3690640395141738949" at="42,27,43,29" />
+      <scope id="3690640395141738949" at="45,37,46,28" />
+      <scope id="3690640395141738949" at="15,45,17,17" />
+      <scope id="3690640395141738949" at="36,44,38,17" />
+      <scope id="3690640395141738949" at="9,0,12,0" />
+      <scope id="3690640395141738949" at="12,0,15,0">
+        <var name="value" id="3690640395141738949" />
+      </scope>
+      <scope id="3690640395141738949" at="21,0,24,0" />
+      <scope id="3690640395141738949" at="24,0,27,0">
+        <var name="value" id="3690640395141738949" />
+      </scope>
+      <scope id="3690640395141738949" at="30,0,33,0" />
+      <scope id="3690640395141738949" at="33,0,36,0">
+        <var name="value" id="3690640395141738949" />
+      </scope>
+      <scope id="3690640395141738949" at="42,0,45,0" />
+      <scope id="3690640395141738949" at="45,0,48,0">
+        <var name="value" id="3690640395141738949" />
+      </scope>
+      <scope id="3690640395141738949" at="15,0,19,0">
+        <var name="value" id="3690640395141738949" />
+      </scope>
+      <scope id="3690640395141738949" at="36,0,40,0">
+        <var name="value" id="3690640395141738949" />
+      </scope>
+      <scope id="3690640395141738949" at="19,46,27,6" />
+      <scope id="3690640395141738949" at="40,45,48,6" />
+      <scope id="3690640395141738949" at="19,0,29,0" />
+      <scope id="3690640395141738949" at="40,0,50,0" />
+      <unit id="3690640395141738949" at="20,15,27,5" name="DTO.sandbox.Person$1" />
+      <unit id="3690640395141738949" at="41,15,48,5" name="DTO.sandbox.Person$2" />
+      <unit id="3690640395141738949" at="7,0,51,0" name="DTO.sandbox.Person" />
+    </file>
+    <file name="Student.java">
+      <node id="3690640395141738950" at="8,0,9,0" concept="1" trace="myPerson" />
+      <node id="3690640395141738950" at="9,29,10,25" concept="3" />
+      <node id="3690640395141738950" at="12,41,13,26" concept="0" />
+      <node id="3690640395141738950" at="15,42,16,22" concept="0" />
+      <node id="3690640395141738950" at="16,22,17,17" concept="3" />
+      <node id="3690640395141738950" at="21,27,22,27" concept="3" />
+      <node id="3690640395141738950" at="24,37,25,26" concept="0" />
+      <node id="3690640395141738950" at="29,0,30,0" concept="1" trace="myMatNr" />
+      <node id="3690640395141738950" at="30,29,31,24" concept="3" />
+      <node id="3690640395141738950" at="33,41,34,25" concept="0" />
+      <node id="3690640395141738950" at="36,43,37,21" concept="0" />
+      <node id="3690640395141738950" at="37,21,38,17" concept="3" />
+      <node id="3690640395141738950" at="42,28,43,26" concept="3" />
+      <node id="3690640395141738950" at="45,38,46,25" concept="0" />
+      <node id="3690640395141738950" at="9,0,12,0" concept="2" trace="getPerson#()LDTO/sandbox/Person;" />
+      <node id="3690640395141738950" at="12,0,15,0" concept="2" trace="_setPerson#(LDTO/sandbox/Person;)V" />
+      <node id="3690640395141738950" at="21,0,24,0" concept="2" trace="get#()LDTO/sandbox/Person;" />
+      <node id="3690640395141738950" at="24,0,27,0" concept="2" trace="set#(LDTO/sandbox/Person;)V" />
+      <node id="3690640395141738950" at="30,0,33,0" concept="2" trace="getMatNr#()Ljava/lang/Integer;" />
+      <node id="3690640395141738950" at="33,0,36,0" concept="2" trace="_setMatNr#(Ljava/lang/Integer;)V" />
+      <node id="3690640395141738950" at="42,0,45,0" concept="2" trace="get#()Ljava/lang/Integer;" />
+      <node id="3690640395141738950" at="45,0,48,0" concept="2" trace="set#(Ljava/lang/Integer;)V" />
+      <node id="3690640395141738950" at="15,0,19,0" concept="2" trace="setPerson#(LDTO/sandbox/Person;)LDTO/sandbox/Person;" />
+      <node id="3690640395141738950" at="36,0,40,0" concept="2" trace="setMatNr#(Ljava/lang/Integer;)Ljava/lang/Integer;" />
+      <node id="3690640395141738950" at="19,43,27,6" concept="3" />
+      <node id="3690640395141738950" at="40,43,48,6" concept="3" />
+      <node id="3690640395141738950" at="19,0,29,0" concept="2" trace="refToPerson#()Ljetbrains/mps/references/Reference;" />
+      <node id="3690640395141738950" at="40,0,50,0" concept="2" trace="refToMatNr#()Ljetbrains/mps/references/Reference;" />
+      <scope id="3690640395141738950" at="9,29,10,25" />
+      <scope id="3690640395141738950" at="12,41,13,26" />
+      <scope id="3690640395141738950" at="21,27,22,27" />
+      <scope id="3690640395141738950" at="24,37,25,26" />
+      <scope id="3690640395141738950" at="30,29,31,24" />
+      <scope id="3690640395141738950" at="33,41,34,25" />
+      <scope id="3690640395141738950" at="42,28,43,26" />
+      <scope id="3690640395141738950" at="45,38,46,25" />
+      <scope id="3690640395141738950" at="15,42,17,17" />
+      <scope id="3690640395141738950" at="36,43,38,17" />
+      <scope id="3690640395141738950" at="9,0,12,0" />
+      <scope id="3690640395141738950" at="12,0,15,0">
+        <var name="value" id="3690640395141738950" />
+      </scope>
+      <scope id="3690640395141738950" at="21,0,24,0" />
+      <scope id="3690640395141738950" at="24,0,27,0">
+        <var name="value" id="3690640395141738950" />
+      </scope>
+      <scope id="3690640395141738950" at="30,0,33,0" />
+      <scope id="3690640395141738950" at="33,0,36,0">
+        <var name="value" id="3690640395141738950" />
+      </scope>
+      <scope id="3690640395141738950" at="42,0,45,0" />
+      <scope id="3690640395141738950" at="45,0,48,0">
+        <var name="value" id="3690640395141738950" />
+      </scope>
+      <scope id="3690640395141738950" at="15,0,19,0">
+        <var name="value" id="3690640395141738950" />
+      </scope>
+      <scope id="3690640395141738950" at="36,0,40,0">
+        <var name="value" id="3690640395141738950" />
+      </scope>
+      <scope id="3690640395141738950" at="19,43,27,6" />
+      <scope id="3690640395141738950" at="40,43,48,6" />
+      <scope id="3690640395141738950" at="19,0,29,0" />
+      <scope id="3690640395141738950" at="40,0,50,0" />
+      <unit id="3690640395141738950" at="20,15,27,5" name="DTO.sandbox.Student$1" />
+      <unit id="3690640395141738950" at="41,15,48,5" name="DTO.sandbox.Student$2" />
+      <unit id="3690640395141738950" at="7,0,51,0" name="DTO.sandbox.Student" />
+    </file>
+  </root>
+</debug-info>
+
